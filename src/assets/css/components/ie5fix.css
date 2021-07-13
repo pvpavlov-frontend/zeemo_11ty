@@ -1,0 +1,9 @@
+/* containers */
+
+.header__container {
+  position: static;
+}
+
+body { 
+  overflow-x: hidden;
+}

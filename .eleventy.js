@@ -4,36 +4,36 @@ const translations = require('./src/_data/i18n');
 const gap = 8;
 const startWidthes = [320, 360, 375, 414, 428, 768, 1024, 1280, 1440];
 
-async function imageFull(src, alt, sizes  = "100vw") {
-if(alt === undefined) {
-    // You bet we throw an error on missing alt (alt="" works okay)
-    throw new Error(`Missing \`alt\` on responsiveimage from: ${src}`);
-}
-let endWidthes = [];
-for(let i = 0; i < startWidthes.length; i++) {
-    let x1 = startWidthes[i] - gap*4;
-    endWidthes.push(x1);
-    let x2 = x1*2;
-    endWidthes.push(x2);
-
-    if(startWidthes[i] < 768) {
-        let x3 = x1*3;
-        endWidthes.push(x3);
-    } else {
-        let x15 = x1*1.5;
-        endWidthes.push(x15);
+async function imageFull(src, alt, sizes = "100vw") {
+    if (alt === undefined) {
+        // You bet we throw an error on missing alt (alt="" works okay)
+        throw new Error(`Missing \`alt\` on responsiveimage from: ${src}`);
     }
-}
+    let endWidthes = [];
+    for (let i = 0; i < startWidthes.length; i++) {
+        let x1 = startWidthes[i] - gap * 4;
+        endWidthes.push(x1);
+        let x2 = x1 * 2;
+        endWidthes.push(x2);
 
-let metadata = await Image(src, {
-    widths: endWidthes,
-    formats: ['webp', 'jpeg'],
-    outputDir: './_site/assets/img'
-});
+        if (startWidthes[i] < 768) {
+            let x3 = x1 * 3;
+            endWidthes.push(x3);
+        } else {
+            let x15 = x1 * 1.5;
+            endWidthes.push(x15);
+        }
+    }
 
-let lowsrc = metadata.jpeg[19];
+    let metadata = await Image(src, {
+        widths: endWidthes,
+        formats: ['webp', 'jpeg'],
+        outputDir: './_site/assets/img'
+    });
 
-return `<picture>
+    let lowsrc = metadata.jpeg[19];
+
+    return `<picture>
 ${Object.values(metadata).map(imageFormat => {
   return `              <source type="${imageFormat[0].sourceType}" srcset="./../assets${imageFormat.map(entry => entry.srcset).join(", ./../assets")}" sizes="${sizes}">`;    }).join("\n")}
                 <img
@@ -48,43 +48,43 @@ ${Object.values(metadata).map(imageFormat => {
 }
 
 async function imageHalf(src, alt, sizes = "100vw") {
-    if(alt === undefined) {
+    if (alt === undefined) {
         // You bet we throw an error on missing alt (alt="" works okay)
         throw new Error(`Missing \`alt\` on responsiveimage from: ${src}`);
     }
-    
+
     let endWidthes = [];
-    for(let i = 0; i < startWidthes.length; i++) {
-        let x1 = startWidthes[i] - gap*4;
+    for (let i = 0; i < startWidthes.length; i++) {
+        let x1 = startWidthes[i] - gap * 4;
         endWidthes.push(x1);
 
-        if(startWidthes[i] < 600) {
-            let x2 = x1*2;
+        if (startWidthes[i] < 600) {
+            let x2 = x1 * 2;
             endWidthes.push(x2);
-            let x3 = x1*3;
+            let x3 = x1 * 3;
             endWidthes.push(x3);
-        } else if(startWidthes[i] >= 600 && startWidthes[i] < 768){
-            let x2 = (startWidthes[i]/2 - gap*4)*2;
+        } else if (startWidthes[i] >= 600 && startWidthes[i] < 768) {
+            let x2 = (startWidthes[i] / 2 - gap * 4) * 2;
             endWidthes.push(x2);
-            let x3 = (startWidthes[i]/2 - gap*4)*3;
+            let x3 = (startWidthes[i] / 2 - gap * 4) * 3;
             endWidthes.push(x3);
         } else {
-            let x15 = (startWidthes[i]/2 - gap*4)*1.5;
+            let x15 = (startWidthes[i] / 2 - gap * 4) * 1.5;
             endWidthes.push(x15);
-            let x2 = (startWidthes[i]/2 - gap*4)*2;
+            let x2 = (startWidthes[i] / 2 - gap * 4) * 2;
             endWidthes.push(x2);
         }
     }
-    
+
     let metadata = await Image(src, {
         widths: endWidthes,
         formats: ['webp', 'jpeg'],
         outputDir: './_site/assets/img'
     });
-    
+
     let lowsrc = metadata.jpeg[13];
-    
-return `<picture>
+
+    return `<picture>
 ${Object.values(metadata).map(imageFormat => {
     return `              <source type="${imageFormat[0].sourceType}" srcset="./../assets${imageFormat.map(entry => entry.srcset).join(", ./../assets")}" sizes="${sizes}">`;    }).join("\n")}
                 <img
@@ -105,6 +105,10 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addWatchTarget("./src/assets/img/");
     eleventyConfig.addPassthroughCopy("./src/assets/js/");
     eleventyConfig.addWatchTarget("./src/assets/js/");
+    eleventyConfig.addPassthroughCopy("./src/assets/fonts/");
+    eleventyConfig.addWatchTarget("./src/assets/fonts/");
+    eleventyConfig.addPassthroughCopy("./src/assets/webfonts/");
+    eleventyConfig.addWatchTarget("./src/assets/webfonts/");
     eleventyConfig.addNunjucksAsyncShortcode("imageFull", imageFull);
     eleventyConfig.addLiquidShortcode("imageFull", imageFull);
     eleventyConfig.addJavaScriptFunction("imageFull", imageFull);
@@ -115,7 +119,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPlugin(i18n, {
         translations,
         fallbackLocales: {
-          'es-ES': 'en-GB'
+            'es-ES': 'en-GB'
         }
     });
 
@@ -130,16 +134,16 @@ module.exports = function (eleventyConfig) {
     // Can also be handled by netlify.toml?
     eleventyConfig.setBrowserSyncConfig({
         callbacks: {
-        ready: function (err, bs) {
-            bs.addMiddleware('*', (req, res) => {
-            if (req.url === '/') {
-                res.writeHead(302, {
-                location: '/en-GB/'
+            ready: function (err, bs) {
+                bs.addMiddleware('*', (req, res) => {
+                    if (req.url === '/') {
+                        res.writeHead(302, {
+                            location: '/en-GB/'
+                        });
+                        res.end();
+                    }
                 });
-                res.end();
             }
-            });
-        }
         }
     });
     // Configuration

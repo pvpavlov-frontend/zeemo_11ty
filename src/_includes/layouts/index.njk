@@ -1,129 +1,18 @@
 <!DOCTYPE html>
 <html lang="{{ locale }}" dir="{{ dir }}">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>{{ title }}</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    
-    <!-- Config -->
-    <link rel="stylesheet" href="../assets/css/config.css">
-    
-    <!-- Menu -->
-    <link rel="stylesheet" href="../assets/css/menu/ie5.css">
-    <link rel="stylesheet" href="../assets/css/menu/ie7.css">
-    <!--[if IE 5]>
-    <link rel="stylesheet" href="../assets/css/menu/ie5fix.css">
-    <![endif]-->
-    <link rel="stylesheet" href="../assets/css/menu/ie8.css">
-    <link rel="stylesheet" href="../assets/css/menu/mobile.css">
-    <link rel="stylesheet" href="../assets/css/menu/flex.css">
 
-    <!-- Blocks -->
-    <link rel="stylesheet" href="../assets/css/blocks/ie5.css">
-    <!--[if IE 5]>
-      <link rel="stylesheet" href="../assets/css/blocks/ie5fix.css">
-    <![endif]-->
-    <link rel="stylesheet" href="../assets/css/blocks/ie7.css">
-    <link rel="stylesheet" href="../assets/css/blocks/media.css">
-    <link rel="stylesheet" href="../assets/css/blocks/flex.css">
-
-    <!-- Breadcrumb -->
-    <link rel="stylesheet" href="../assets/css/breadcrumb/style.css">
-
-    <!-- List links -->
-    <link rel="stylesheet" href="../assets/css/list-links/style.css">
-
-    <!-- Contact form -->
-    <link rel="stylesheet" href="../assets/css/contact-form/style.css">
-
-    <!-- Blocks slide animation -->
-    <link rel="stylesheet" href="../assets/css/animations/blocks-slide/style.css" />
-
-    <!-- Progress bar circle animation -->
-    <link rel="stylesheet" href="../assets/css/animations/progress-bar-circle/style.css" />
-
-    <!-- Progress bar linear animation -->
-    <link rel="stylesheet" href="../assets/css/animations/progress-bar-linear/style.css" />
-
-    <!-- Slider -->
-    <link rel="stylesheet" href="../assets/css/slider/ie5.css">
-    <link rel="stylesheet" href="../assets/css/slider/ie7.css">
-    <link rel="stylesheet" href="../assets/css/slider/flex.css">
-
-    <!--Table-pick -->
-    <link rel="stylesheet" href="../assets/css/table/pick/style.css" />
-    
-    <!--Self-link -->
-    <link rel="stylesheet" href="../assets/css/self-link/style.css" />
-    
-    <!--Picture -->
-    <link rel="stylesheet" href="../assets/css/picture/style.css" />
-
-    <!--Mansonry gallery filter -->
-    <link rel="stylesheet" href="../assets/css/mansonry-gallery-filter/style.css" />
-
-    <!--Buttons -->
-    <link rel="stylesheet" href="../assets/css/buttons/style.css" />
-
-    <!--Spacers -->
-    <link rel="stylesheet" href="../assets/css/spacers/style.css" />
-
-    <script>
-      var html = document.getElementsByTagName('html');
-      if(html.length) {
-        html[0].className += html[0].className ? " js" : "js";
-      }
-
-      window.animation = false;
-      if( document.createElement('div').style.animationName !== undefined ) { 
-          window.animation = true;
-          document.querySelector('html').classList.add('animation-supported')
-      }
-    </script>
-  </head>
+  {% include 'partials/head.njk' %}
   <body class="page">
     {% include 'partials/header.njk' %}
     <div class="main">
       <main>
-          <div>
-          <h2>Language selector</h2>
-            {% include 'partials/language-selector.njk' %}
-        </div>
         <div class="main__inner">
             {{ content | safe }}
         </div>
       </main>
     </div>
-
-    <!-- Header -->
-    <script src="../assets/js/menu/class-function.js"></script>
-    <script src="../assets/js/menu/window-width.js"></script>
-    <script src="../assets/js/menu/is-media-queries-supported.js"></script>
-    <script src="../assets/js/menu/support-css.js"></script>
-    <script src="../assets/js/menu/keycodes.js"></script> 
-    <script src="../assets/js/menu/mobile.js"></script>
-    <script src="../assets/js/menu/anchor-links.js"></script>
-    <script src="../assets/js/menu/close-dropdown-main-menu.js"></script>
-    <script src="../assets/js/menu/empty-space-click.js"></script>
-    <script src="../assets/js/menu/keyboard-support.js"></script>
-
-
-    <!-- Slider -->
-    <!-- Slider also uses the class-function.js file - I didn't add it again, because it is already on the menu. -->
-    <script src="../assets/js/slider/slider.js"></script>
-
-    <!-- Animation -->
-    <script src="../assets/js/animation/animation.js"></script>
-
-    <!-- Table-pick -->
-    <!-- Table also uses the class-function.js file - I didn't add it again, because it is already on the menu. -->
-    <script src="../assets/js/tables/pick/pick-columns.js"></script>
-
-    <!-- Self link -->
-    <script src="../assets/js/mansonry-gallery-filter/filter.js"></script>
-
-    <!-- Self link -->
-    <script src="../assets/js/self-link/script.js"></script>
+    {% include 'partials/footer.njk' %}
+    {% include 'partials/scripts.njk' %}
+  
   </body>
 </html>

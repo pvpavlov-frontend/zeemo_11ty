@@ -1,0 +1,15 @@
+.contact-form__buffer-container {
+    padding: 10px;
+}
+
+.contact-form,
+.contact-form input,
+.contact-form textarea {
+    font-family: "Inter", "Arial", sans-serif;
+}
+
+.contact-form input,
+.contact-form label,
+.contact-form textarea {
+    display: block;
+}

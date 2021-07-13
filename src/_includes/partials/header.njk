@@ -18,10 +18,11 @@
                 <ul class="main-menu" role="menubar" aria-label="softevol main menu">
                 {% for link, href in menu %}
                     <li class="main-menu__item" role="none">
-                        <a class="main-menu__link main-menu__link--current" href="{{ href }}" role="menuitem">{{ link | i18n }} </a>
+                        <a class="main-menu__link" href="{{ href }}" role="menuitem">{{ link | i18n }} </a>
                     </li>
                 {% endfor %}
                 </ul>
+                {% include 'partials/language-selector.njk' %}
             </nav>
             </div>
         </div>

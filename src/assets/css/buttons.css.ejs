@@ -1,0 +1,247 @@
+---
+permalink: "assets/css/buttons.css"
+eleventyExcludeFromCollections: "true"
+---
+
+/* menu link */
+
+.main-menu__link {
+    margin: 0;
+    font-family: "Inter", Sans-serif;
+    font-size: 12px;
+    line-height: 1.2em;
+    letter-spacing: 1.3px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 0px 12px 0px 12px;
+    color: <%= colors.Greys["White"].color %>;
+    border: 1px solid transparent;
+    transition: all .4s ease;
+    text-decoration: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.main-menu__link:hover,
+.main-menu__link.hover {
+
+    color: <%= colors.Theme["Theme Primary"].color %>;
+}
+
+.main-menu__link:active,
+.main-menu__link.active {
+    background-color: transparent;
+}
+
+
+.main-menu__link:disabled,
+.main-menu__link.disabled {
+    color: <%= colors.Greys["grey90"].color %>;
+    cursor: default;
+}
+
+.main-menu__link:disabled:hover {
+    background-color: transparent;
+}
+
+.main-menu__link:focus,
+.main-menu__link.focus {
+    border-color: <%= colors.Greys["White"].color %>;
+    outline: none;
+}
+
+.main-menu__link:focus:not(:focus-visible) {
+    background-color: transparent;
+    border-color: transparent;
+    outline: none;
+}
+
+.main-menu__link:focus-visible {
+    border-color: <%= colors.Greys["White"].color %>;
+    outline: none;
+}
+
+.main-menu__link--current {
+    color: <%= colors.Theme["Theme Primary"].color %>;
+    font-weight: 700;
+}
+
+.primary-button {
+    display: inline-block;
+    font-family: "Inter", Sans-serif;
+    font-size: 16px;
+    line-height: 1em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    color:<%= colors.Greys["White"].color %>;
+    text-decoration: none;
+    background-color: <%= colors.Theme["Theme Primary"].color %>;
+    border-radius: 0;
+    padding: 20px 40px 20px 40px;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+    border: 0;
+    cursor: pointer;
+}
+
+/* primary button */
+
+.primary-button:hover,
+.primary-button.hover {
+    background-color: <%= colors.Theme["Theme DarkAlt"].color %>;
+    color: <%= colors.Greys["grey160"].color %>;
+    transform: translateY(-8px);
+}
+
+.primary-button:active,
+.primary-button.active {
+    background-color: <%= colors.Theme["Theme Dark"].color %>;
+}
+
+
+.primary-button:disabled,
+.primary-button.disabled {
+    color: <%= colors.Greys["grey90"].color %>;
+    background-color: <%= colors.Greys["grey20"].color %>;
+    cursor: default;
+    transform: translateY(0px);
+}
+
+.primary-button:disabled:hover {
+    color: <%= colors.Greys["grey90"].color %>;
+    background-color: transparent;
+}
+
+.primary-button:focus,
+.primary-button.focus {
+    outline: none;
+    box-shadow:  0 0 0 2px <%= colors.Theme["Theme Primary"].color %> inset, 0 0 0 3px <%= colors.Greys["White"].color %> inset;
+}
+
+.primary-button:focus:not(:focus-visible) {
+    background-color: <%= colors.Theme["Theme Dark"].color %>;
+    box-shadow: none;
+    outline: none;
+}
+
+.primary-button:focus-visible {
+    box-shadow:  0 0 0 2px <%= colors.Theme["Theme Primary"].color %> inset, 0 0 0 3px <%= colors.Greys["White"].color %> inset;
+    outline: none;
+}
+
+/* text-button */
+
+.text-button {
+    font-family: "Inter", "Arial", sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    text-decoration: none;
+    color: <%= colors.Greys["grey190"].color %>;
+    padding: 6px 20px;
+    border: 1px solid transparent;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all .3s;
+
+}
+
+.text-button:hover,
+.text-button.hover {
+    background-color: transparent;
+    color: <%= colors.Theme["Theme Primary"].color %>;
+    transform: translateY(-8px);
+}
+
+.text-button:active,
+.text-button.active {
+    background-color: transparent;
+    color: <%= colors.Theme["Theme Dark"].color %>;
+}
+
+
+.text-button:disabled,
+.text-button.disabled {
+    color: <%= colors.Greys["grey90"].color %>;
+    cursor: default;
+    transform: translateY(0px);
+}
+
+.text-button:disabled:hover {
+    background-color: transparent;
+}
+
+.text-button:focus,
+.text-button.focus {
+    border-color: <%= colors.Greys["Black"].color %>;
+    outline: none;
+}
+
+.text-button:focus:not(:focus-visible) {
+    background-color: <%= colors.Greys["grey30"].color %>;
+    border-color: transparent;
+    outline: none;
+}
+
+.text-button:focus-visible {
+    border-color: <%= colors.Greys["Black"].color %>;
+    outline: none;
+}
+
+/* nav-link */
+
+.nav-link {
+    font-family: "Heebo", "Arial", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 300;
+    text-decoration: none;
+    color:<%= colors.Greys["White"].color %>;
+    padding: 6px 5px;
+    border: 1px solid transparent;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.nav-link:hover,
+.nav-link.hover {
+    background-color: transparent;
+    color:<%= colors.Theme["Theme Primary"].color %>;
+}
+
+.nav-link:active,
+.nav-link.active {
+    background-color: transparent;
+    color:<%= colors.Theme["Theme Primary"].color %>;
+}
+
+
+.nav-link:disabled,
+.nav-link.disabled {
+    color: <%= colors.Greys["grey90"].color %>;
+    cursor: default;
+}
+
+.nav-link:disabled:hover {
+    background-color: transparent;
+}
+
+.nav-link:focus,
+.nav-link.focus {
+    border-color: <%= colors.Greys["White"].color %>;
+    outline: none;
+}
+
+.nav-link:focus:not(:focus-visible) {
+    <!-- background-color: <%= colors.Greys["grey30"].color %>; -->
+    background-color: transparent;
+    border-color: transparent;
+    outline: none;
+}
+
+.nav-link:focus-visible {
+    border-color: <%= colors.Greys["White"].color %>;
+    outline: none;
+}

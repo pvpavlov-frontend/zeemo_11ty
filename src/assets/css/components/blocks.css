@@ -1,0 +1,121 @@
+/* Blocks */
+
+.clearfix {
+    zoom: 1;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.blocks-container {
+    padding: 0 1px;
+    /* Without this rule, blocks will line up in column. Paddings must be at least nominal */
+}
+
+.blocks-container--2 .blocks-container__item {
+    float: left;
+    width: 50%;
+}
+
+.blocks-container--3 .blocks-container__item {
+    float: left;
+    width: 33.33%;
+}
+
+.blocks-container--4 .blocks-container__item {
+    float: left;
+    width: 25%;
+}
+
+.blocks-container--5 .blocks-container__item {
+    float: left;
+    width: 20%;
+}
+
+.blocks-container--6 .blocks-container__item {
+    float: left;
+    width: 16.66%;
+}
+
+.blocks-container__item-buffer-outer,
+.blocks-container__item-buffer-inner {
+    padding: 10px;
+}
+
+
+@media (max-width: 767px) {
+    .blocks-container--wrap>.blocks-container__item {
+        display: block;
+        width: 100%;
+        float: none;
+    }
+
+    .footer__inner .blocks-container--wrap>.blocks-container__item {
+        display: block;
+        width: 50%;
+        float: none;
+    }
+
+    address>.blocks-container--2 .blocks-container__item {
+        width: 100%;
+    }
+}
+
+@supports (display: flex) {
+    .blocks-container {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+
+    .blocks-container__item,
+    .blocks-container__item-buffer-outer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .blocks-container__item>*,
+    .blocks-container__item-buffer-outer>* {
+        height: 100%;
+    }
+
+
+    @media (max-width: 1023px) {
+
+        .contact-us__inner>.blocks-container>.blocks-container__item {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 767px) {
+
+        .blocks-container__item>*,
+        .blocks-container__item-buffer-outer>* {
+            height: auto;
+        }
+    }
+
+    .clearfix::before,
+    .clearfix::after {
+        content: none;
+    }
+
+    @media (max-width: 450px) {
+
+        .footer__inner .blocks-container--wrap>.blocks-container__item:nth-child(2),
+        .footer__inner .blocks-container--wrap>.blocks-container__item:nth-child(3) {
+            width: 50%;
+        }
+
+        .footer__inner .blocks-container--wrap>.blocks-container__item {
+            width: 100%;
+        }
+    }
+}

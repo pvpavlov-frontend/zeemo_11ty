@@ -2,8 +2,8 @@
 {% set pageUrl = page.url.split('/').slice(2).join('/') %}
 
 {% if locales.length %}
-  <p>{{ 'select_language' | i18n }}:</p>
   <ul>
+    <p>{{ 'select_language' | i18n }}:</p>
     {% for locale in locales -%}
       <li><a href="/{{ locale.code }}/{{ pageUrl }}" rel="alternate" hreflang="{{ locale.code }}">{{ locale.label }}</a></li>
     {% endfor -%}

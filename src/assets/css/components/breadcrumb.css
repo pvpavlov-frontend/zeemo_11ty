@@ -1,0 +1,64 @@
+.breadcrumb__list {
+    list-style: none;
+    margin: 0;
+    padding: 4px;
+    /* Paddings matter for clearfix in IE 5.  */
+}
+
+.breadcrumb__item {
+    position: relative;
+    display: block;
+    float: left;
+    padding-left: 5px;
+}
+
+.breadcrumb__item i {
+    padding: 0 10px;
+    color: #d22108;
+}
+
+/* .breadcrumb__item+.breadcrumb__item::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 2px;
+    transform: rotate(15deg);
+    height: 13px;
+    width: 1px;
+    background-color: #000000;
+} */
+
+.breadcrumb__link {
+    /* display: block; */
+    display: inline-block;
+    padding: 4px;
+}
+
+/* Clearfix taken from blocks component */
+
+.breadcrumb__list.clearfix {
+    zoom: 1;
+}
+
+.breadcrumb__list.clearfix:before,
+.breadcrumb__list.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.breadcrumb__list.clearfix:after {
+    clear: both;
+}
+
+@supports (display: flex) {
+    .breadcrumb__list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .breadcrumb__list.clearfix::before,
+    .breadcrumb__list.clearfix::after {
+        content: none;
+    }
+}

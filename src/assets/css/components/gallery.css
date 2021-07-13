@@ -1,0 +1,11 @@
+
+  /* gallery */
+  
+  .gallery__filter .blocks-container__item {
+    justify-content: center;
+    text-align: center;
+}
+
+.gallery__filter-link {
+    padding: 10px;
+}

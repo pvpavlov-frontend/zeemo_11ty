@@ -1,0 +1,538 @@
+{
+  "key": "value",
+  "media": {
+    "phone" : "767px",
+    "laptop" : "1023px",
+    "desktop" : "default"
+  },
+  "elements" : {
+    "body": {
+      "margin" : 0,
+      "padding" : 0,
+      "font-family": "Inter, Arial, sans-serif"
+    },
+    "container" : {
+      "max-width" : "1140px",
+      "padding": "10px",
+      "margin": "0 auto"
+    },
+    "dimensional-container" : {
+      "padding": "10px"
+    },
+    "h1": {
+      "desktop": {
+        "margin" : "0",
+        "padding" : "10px",
+        "font-family": "Inter, sans-serif",
+        "font-size" : "58px",
+        "font-weight": "700",
+        "line-height": "1.2em",
+        "word-spacing": "0px",
+        "letter-spacing": "0px"
+      },
+      "laptop": {
+
+      },
+      "tablet": {
+        "font-size" : "48px",
+        "line-height": "1.2em"
+      },
+      "phone": {
+        "font-size" : "38px",
+        "line-height": "1.2em"
+      }
+    },
+    "h2": {
+      "desktop": {
+        "margin" : "0",
+        "padding" : "10px",
+        "font-family": "Inter, sans-serif",
+        "font-size" : "38px",
+        "font-weight": "700",
+        "line-height": "1.2em",
+        "word-spacing": "0px",
+        "letter-spacing": "0px"
+      },
+      "laptop": {
+      },
+      "tablet": {
+        "font-size" : "38px",
+        "line-height": "1.2em"
+      },
+      "phone": {
+        "font-size" : "24px",
+        "line-height": "1.2em"
+      }
+    },
+    "h3": {
+      "desktop": {
+        "margin" : "0",
+        "padding" : "10px",
+        "font-family": "Inter, sans-serif",
+        "font-size" : "24px",
+        "font-weight": "600",
+        "line-height": "1em",
+        "word-spacing": "0px",
+        "letter-spacing": "0px"
+      },
+      "laptop": {
+
+      },
+      "tablet": {
+        "font-size" : "22px",
+        "line-height": "1em"
+      },
+      "phone": {
+        "font-size" : "18px",
+        "line-height": "1.2em"
+      }
+    },
+    "h4": {
+      "desktop": {
+        "margin" : "0",
+        "padding" : "10px",
+        "font-family": "Inter, sans-serif",
+        "font-size" : "18px",
+        "font-weight": "600",
+        "line-height": "1.3em",
+        "word-spacing": "0px",
+        "letter-spacing": "0px"
+      },
+      "laptop": {
+      },
+      "tablet": {
+        "font-size" : "18px",
+        "line-height": "1.3em",
+        "letter-spacing": "0px"
+      },
+      "phone": {
+        "font-size" : "16px",
+        "line-height": "1.3em",
+        "letter-spacing": "1.3px"
+      }
+    },
+    "h5": {
+      "desktop": {
+        "margin" : "0",
+        "padding" : "10px",
+        "font-family": "Inter, sans-serif",
+        "font-size" : "16px",
+        "font-weight": "600",
+        "line-height": "1em",
+        "word-spacing": "0px",
+        "letter-spacing": "1.3px"
+      },
+      "laptop": {
+      },
+      "tablet": {
+        "font-size" : "16px",
+        "line-height": "1em",
+        "letter-spacing": "1.3px"
+      },
+      "phone": {
+        "font-size" : "14px",
+        "line-height": "1em",
+        "letter-spacing": "1.3px"
+      }
+    },
+    "h6": {
+      "desktop": {
+        "margin" : "0",
+        "padding" : "10px",
+        "font-family": "Inter, sans-serif",
+        "font-size" : "12px",
+        "font-weight": "600",
+        "line-height": "1em",
+        "word-spacing": "0px",
+        "letter-spacing": "1.3px"
+      },
+      "laptop": {
+      },
+      "tablet": {
+        "font-size" : "12px",
+        "line-height": "1em",
+        "letter-spacing": "1.3px"
+      },
+      "phone": {
+        "font-size" : "12px",
+        "line-height": "1em",
+        "letter-spacing": "1.3px"
+      }
+    },
+    "p": {
+      "desktop": {
+        "margin" : "0",
+        "padding" : "10px",
+        "font-family": " Heebo, sans-serif ",
+        "font-size" : "16px",
+        "font-weight": "300",
+        "line-height": "1.5",
+        "word-spacing": "0px",
+        "letter-spacing": "0px"
+      },
+      "laptop": {
+      },
+      "tablet": {
+        "font-size" : "16px",
+        "line-height": "1.5"
+      },
+      "phone": {
+        "font-size" : "14px",
+        "line-height": "1.5"
+      }
+    },
+    "ul": {
+      "desktop": {
+        "margin" : "0",
+        "padding" : "10px 10px 10px 38px",
+        "font-family": " Heebo, sans-serif ",
+        "font-weight": "300",
+        "font-size" : "16px",
+        "line-height": "37px",
+        "word-spacing": "0px",
+        "letter-spacing": "0px"
+      },
+      "laptop": {
+      },
+      "tablet": {
+        "font-size" : "16px",
+        "line-height": "2"
+      },
+      "phone": {
+        "font-size" : "14px",
+        "line-height": "2"
+      }
+    },
+    "ol": {
+      "desktop": {
+        "margin" : "0",
+        "padding" : "10px 10px 10px 38px",
+        "font-family": " Heebo, sans-serif ",
+        "font-weight": "300",
+        "font-size" : "16px",
+        "line-height": "1.5",
+        "word-spacing": "0px",
+        "letter-spacing": "0px"
+      },
+      "laptop": {
+      },
+      "tablet": {
+        "font-size" : "16px",
+        "line-height": "1.5"
+      },
+      "phone": {
+        "font-size" : "14px",
+        "line-height": "1.5"
+      }
+    },
+    "dl": {
+      "desktop": {
+        "margin" : "0",
+        "padding" : "10px 10px 10px 38px",
+        "font-family": " Heebo, sans-serif ",
+        "font-weight": "300",
+        "font-size" : "16px",
+        "line-height": "1.5",
+        "word-spacing": "0px",
+        "letter-spacing": "0px"
+      },
+      "laptop": {
+      },
+      "tablet": {
+        "font-size" : "16px",
+        "line-height": "1.5"
+      },
+      "phone": {
+        "font-size" : "14px",
+        "line-height": "1.5"
+      }
+    },
+    "blockquote": {
+      "desktop" : {
+        "margin" : "0",
+        "padding" : "16px 40px",
+        "font-family": " Heebo, sans-serif ",
+        "font-weight": "400",
+        "font-size" : "16px",
+        "line-height": "160%",
+        "word-spacing": "0px",
+        "letter-spacing": "0px"
+      },
+      "laptop" : {
+        "font-size" : "16px",
+        "line-height": "160%"
+      },
+      "tablet" : {
+        "font-size" : "16px",
+        "line-height": "160%"
+      },
+      "phone" : {
+        "font-size" : "16px",
+        "line-height": "160%"
+      }
+    },
+    "table": {
+      "desktop" : {
+        "margin" : "0",
+        "padding" : "0",
+        "font-family": " Heebo, sans-serif ",
+        "font-weight": "400",
+        "font-size" : "16px",
+        "line-height": "150%",
+        "word-spacing": "0px",
+        "letter-spacing": "0px"
+      },
+      "laptop" : {
+        "font-size" : "16px",
+        "line-height": "150%"
+      },
+      "tablet" : {
+        "font-size" : "16px",
+        "line-height": "150%"
+      },
+      "phone" : {
+        "font-size" : "16px",
+        "line-height": "150%"
+      }
+    },
+    "title": {
+      "desktop": {
+        "margin" : "0",
+        "padding" : "10px",
+        "font-family": "Inter, sans-serif",
+        "font-size" : "38px",
+        "font-weight": "700",
+        "line-height": "1.2em",
+        "word-spacing": "0px",
+        "letter-spacing": "0px"
+      },
+      "laptop": {
+        "font-size" : "20px",
+        "line-height": "32px"
+      },
+      "tablet": {
+        "font-size" : "20px",
+        "line-height": "32px"
+      },
+      "phone": {
+        "font-size" : "20px",
+        "line-height": "32px"
+      }
+    },
+    "subtitle": {
+      "desktop": {
+        "margin" : "0",
+        "padding" : "10px",
+        "font-family": "Inter, sans-serif",
+        "font-size" : "16px",
+        "line-height": "1em",
+        "font-weight": "600",
+        "text-transform": "uppercase",
+        "letter-spacing": "1.3px",
+        "word-spacing": "0px"
+      },
+      "laptop": {
+        "font-size" : "16px",
+        "line-height": "1em"
+      },
+      "tablet": {
+        "font-size" : "16px",
+        "line-height": "1em"
+      },
+      "phone": {
+        "font-size" : "14px",
+        "line-height": "1em"
+      }
+    },
+    "body-xxl": {
+      "desktop": {
+        "margin" : "0",
+        "padding" : "10px",
+        "font-family": "Roboto",
+        "font-weight": "700",
+        "font-size" : "56px",
+        "line-height": "56px",
+        "word-spacing": "0px",
+        "letter-spacing": "0px"
+      },
+      "laptop": {
+        "font-size" : "56px",
+        "line-height": "56px"
+      },
+      "tablet": {
+        "font-size" : "56px",
+        "line-height": "56px"
+      },
+      "phone": {
+        "font-size" : "56px",
+        "line-height": "56px"
+      }
+    },
+    "body-xl": {
+      "desktop": {
+        "margin" : "0",
+        "padding" : "10px",
+        "font-family": "Roboto",
+        "font-weight": "400",
+        "font-size" : "20px",
+        "line-height": "32px",
+        "word-spacing": "0px",
+        "letter-spacing": "0px"
+      },
+      "laptop": {
+        "font-size" : "20px",
+        "line-height": "32px"
+      },
+      "tablet": {
+        "font-size" : "20px",
+        "line-height": "32px"
+      },
+      "phone": {
+        "font-size" : "20px",
+        "line-height": "32px"
+      }
+    },
+    "body-l": {
+      "desktop": {
+        "margin" : "0",
+        "padding" : "10px",
+        "font-family": "Roboto",
+        "font-weight": "400",
+        "font-size" : "18px",
+        "line-height": "28px",
+        "word-spacing": "0px",
+        "letter-spacing": "0px"
+      },
+      "laptop": {
+        "font-size" : "18px",
+        "line-height": "28px"
+      },
+      "tablet": {
+        "font-size" : "18px",
+        "line-height": "28px"
+      },
+      "phone": {
+        "font-size" : "18px",
+        "line-height": "28px"
+      }
+    },
+    "body-m": {
+      "desktop": {
+        "margin" : "0",
+        "padding" : "10px",
+        "font-family": "Roboto",
+        "font-weight": "400",
+        "font-size" : "16px",
+        "line-height": "24px",
+        "word-spacing": "0px",
+        "letter-spacing": "0px"
+      },
+      "laptop": {
+        "font-size" : "16px",
+        "line-height": "24px"
+      },
+      "tablet": {
+        "font-size" : "16px",
+        "line-height": "24px"
+      },
+      "phone": {
+        "font-size" : "16px",
+        "line-height": "24px"
+      }
+    },
+    "body-s": {
+      "desktop": {
+        "margin" : "0",
+        "padding" : "10px",
+        "font-family": "Roboto",
+        "font-weight": "500",
+        "font-size" : "14px",
+        "line-height": "20px",
+        "word-spacing": "0px",
+        "letter-spacing": "0.1px"
+      },
+      "laptop": {
+        "font-size" : "14px",
+        "line-height": "20px"
+      },
+      "tablet": {
+        "font-size" : "14px",
+        "line-height": "20px"
+      },
+      "phone": {
+        "font-size" : "14px",
+        "line-height": "20px"
+      }
+    },
+    "button": {
+      "desktop": {
+        "margin" : "0",
+        "padding" : "10px",
+        "font-family": "Inter, sans-serif",
+        "font-size" : "16px",
+        "font-weight": "600",
+        "line-height": "1em",
+        "word-spacing": "0px",
+        "letter-spacing": "1.3px"
+      },
+      "laptop": {
+      },
+      "tablet": {
+        "font-size" : "16px",
+        "line-height": "1em"
+      },
+      "phone": {
+        "font-size" : "14px",
+        "line-height": "1em"
+      }
+    },
+    "caption": {
+      "desktop": {
+        "margin" : "0",
+        "padding" : "8px",
+        "font-family": "Roboto",
+        "font-weight": "400",
+        "font-size" : "12px",
+        "line-height": "16px",
+        "word-spacing": "0px",
+        "letter-spacing": "0.2px"
+      },
+      "laptop": {
+        "font-size" : "12px",
+        "line-height": "16px"
+      },
+      "tablet": {
+        "font-size" : "12px",
+        "line-height": "16px"
+      },
+      "phone": {
+        "font-size" : "12px",
+        "line-height": "16px"
+      }
+    },
+    "overline": {
+      "desktop": {
+        "margin" : "0",
+        "padding" : "8px",
+        "font-family": "Roboto",
+        "font-weight": "400",
+        "font-size" : "10px",
+        "line-height": "16px",
+        "word-spacing": "0px",
+        "letter-spacing": "0.4px"
+      },
+      "laptop": {
+        "font-size" : "10px",
+        "line-height": "16px"
+      },
+      "tablet": {
+        "font-size" : "10px",
+        "line-height": "16px"
+      },
+      "phone": {
+        "font-size" : "10px",
+        "line-height": "16px"
+      }
+    }
+  }
+}

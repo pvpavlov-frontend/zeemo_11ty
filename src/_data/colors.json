@@ -1,7 +1,7 @@
 {
     "Theme" : {
         "Theme Primary": {
-            "color" : "#0571f0",
+            "color" : "#d22108",
             "label" : "#FFFFFF"
         },
         "Theme LighterAlt": {
@@ -21,11 +21,11 @@
             "label" : "#FFFFFF"
         },
         "Theme DarkAlt": {
-            "color" : "#0571f0",
+            "color" : "#d22108",
             "label" : "#FFFFFF"
         },
         "Theme Dark": {
-            "color" : "#0558F0",
+            "color" : "#a60000",
             "label" : "#FFFFFF"
         },
         "Theme Darker": {
@@ -39,7 +39,7 @@
             "label" : "#000000" 
         },
         "grey10" : {
-            "color" : "#F3F6F9",
+            "color" : "#FAF9F8",
             "label" : "#000000" 
         },
         "grey20" : {
@@ -83,7 +83,7 @@
             "label" : "#FFFFFF" 
         },
         "Black" : {
-            "color" : "#06111D",
+            "color" : "#000000",
             "label" : "#FFFFFF" 
         }
     }

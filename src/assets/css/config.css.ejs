@@ -1,0 +1,825 @@
+---
+permalink: "assets/css/config.css"
+eleventyExcludeFromCollections: "true"
+---
+
+body {
+  margin: <%= config.elements.body.desktop['margin'] %>;
+  padding: <%= config.elements.body.desktop['padding'] %>;
+  font-family: <%= config.elements.body.desktop['font-family'] %>;
+}
+
+.container {
+  max-width: <%= config.elements['.container'].desktop['max-width'] %>;
+  padding: <%= config.elements['.container'].desktop['padding'] %>;
+  margin: <%= config.elements['.container'].desktop['margin'] %>;
+}
+
+.dimensional-container {
+  padding: <%= config.elements['.dimensional-container'].desktop['padding'] %>;
+}
+
+
+<% if(config.elements.h1.hasOwnProperty('desktop')) { %>
+  h1,
+  .h1 {
+  <% for (var key in config.elements.h1.desktop) { %>
+    <%= key %>: <%= config.elements.h1.desktop[key] %>;
+  <% } %>
+  }
+  <% } %>
+  
+  <% if(config.elements.h1.hasOwnProperty('laptop')) { %>
+  @media (max-width:  <%= config.media.laptop %>) {
+    h1,
+    .h1 {
+    <% for (var key in config.elements.h1.laptop) { %>
+      <%= key %>: <%= config.elements.h1.laptop[key] %>;
+    <% } %>
+    }
+  }
+  <% } %>
+  <% if(config.elements.h1.hasOwnProperty('tablet')) { %>
+    @media (max-width:  <%= config.media.tablet %>) {
+      h1,
+      .h1 {
+      <% for (var key in config.elements.h1.tablet) { %>
+        <%= key %>: <%= config.elements.h1.tablet[key] %>;
+      <% } %>
+      }
+    }
+  <% } %>
+  <% if(config.elements.h1.hasOwnProperty('phone')) { %>
+    @media (max-width:  <%= config.media.phone %>) {
+      h1,
+      .h1 {
+      <% for (var key in config.elements.h1.phone) { %>
+        <%= key %>: <%= config.elements.h1.phone[key] %>;
+      <% } %>
+      }
+    }
+  <% } %>
+  
+  <% if(config.elements.h2.hasOwnProperty('desktop')) { %>
+    h2,
+    .h2 {
+    <% for (var key in config.elements.h2.desktop) { %>
+      <%= key %>: <%= config.elements.h2.desktop[key] %>;
+    <% } %>
+    }
+    <% } %>
+    <% if(config.elements.h2.hasOwnProperty('laptop')) { %>
+    @media (max-width:  <%= config.media.laptop %>) {
+      h2,
+      .h2 {
+      <% for (var key in config.elements.h2.laptop) { %>
+        <%= key %>: <%= config.elements.h2.laptop[key] %>;
+      <% } %>
+      }
+    }
+    <% } %>
+    <% if(config.elements.h2.hasOwnProperty('tablet')) { %>
+      @media (max-width:  <%= config.media.tablet %>) {
+        h2,
+        .h2 {
+        <% for (var key in config.elements.h2.tablet) { %>
+          <%= key %>: <%= config.elements.h2.tablet[key] %>;
+        <% } %>
+        }
+      }
+    <% } %>
+    <% if(config.elements.h2.hasOwnProperty('phone')) { %>
+      @media (max-width:  <%= config.media.phone %>) {
+        h2,
+        .h2 {
+        <% for (var key in config.elements.h2.phone) { %>
+          <%= key %>: <%= config.elements.h2.phone[key] %>;
+        <% } %>
+        }
+      }
+    <% } %>
+  
+  <% if(config.elements.h3.hasOwnProperty('desktop')) { %>
+    h3,
+    .h3 {
+    <% for (var key in config.elements.h3.desktop) { %>
+      <%= key %>: <%= config.elements.h3.desktop[key] %>;
+    <% } %>
+    }
+    <% } %>
+    <% if(config.elements.h3.hasOwnProperty('laptop')) { %>
+    @media (max-width:  <%= config.media.laptop %>) {
+      h3,
+      .h3 {
+      <% for (var key in config.elements.h3.laptop) { %>
+        <%= key %>: <%= config.elements.h3.laptop[key] %>;
+      <% } %>
+      }
+    }
+    <% } %>
+    <% if(config.elements.h3.hasOwnProperty('tablet')) { %>
+      @media (max-width:  <%= config.media.tablet %>) {
+        h3,
+        .h3 {
+        <% for (var key in config.elements.h3.tablet) { %>
+          <%= key %>: <%= config.elements.h3.tablet[key] %>;
+        <% } %>
+        }
+      }
+  <% } %>
+  <% if(config.elements.h3.hasOwnProperty('phone')) { %>
+    @media (max-width:  <%= config.media.phone %>) {
+      h3,
+      .h3 {
+      <% for (var key in config.elements.h3.phone) { %>
+        <%= key %>: <%= config.elements.h3.phone[key] %>;
+      <% } %>
+      }
+    }
+  <% } %>
+  
+  <% if(config.elements.h4.hasOwnProperty('desktop')) { %>
+    h4,
+    .h4 {
+    <% for (var key in config.elements.h4.desktop) { %>
+      <%= key %>: <%= config.elements.h4.desktop[key] %>;
+    <% } %>
+    }
+    <% } %>
+    <% if(config.elements.h4.hasOwnProperty('laptop')) { %>
+    @media (max-width:  <%= config.media.laptop %>) {
+      h4,
+      .h4 {
+      <% for (var key in config.elements.h4.laptop) { %>
+        <%= key %>: <%= config.elements.h4.laptop[key] %>;
+      <% } %>
+      }
+    }
+    <% } %>
+    <% if(config.elements.h4.hasOwnProperty('tablet')) { %>
+      @media (max-width:  <%= config.media.tablet %>) {
+        h4,
+        .h4 {
+        <% for (var key in config.elements.h4.tablet) { %>
+          <%= key %>: <%= config.elements.h4.tablet[key] %>;
+        <% } %>
+        }
+      }
+  <% } %>
+  <% if(config.elements.h4.hasOwnProperty('phone')) { %>
+    @media (max-width:  <%= config.media.phone %>) {
+      h4,
+      .h4 {
+      <% for (var key in config.elements.h4.phone) { %>
+        <%= key %>: <%= config.elements.h4.phone[key] %>;
+      <% } %>
+      }
+    }
+  <% } %>
+  
+  <% if(config.elements.h5.hasOwnProperty('desktop')) { %>
+    h5,
+    .h5 {
+    <% for (var key in config.elements.h5.desktop) { %>
+      <%= key %>: <%= config.elements.h5.desktop[key] %>;
+    <% } %>
+    }
+    <% } %>
+    <% if(config.elements.h5.hasOwnProperty('laptop')) { %>
+    @media (max-width:  <%= config.media.laptop %>) {
+      h5,
+      .h5 {
+      <% for (var key in config.elements.h5.laptop) { %>
+        <%= key %>: <%= config.elements.h5.laptop[key] %>;
+      <% } %>
+      }
+    }
+    <% } %>
+    <% if(config.elements.h5.hasOwnProperty('tablet')) { %>
+      @media (max-width:  <%= config.media.tablet %>) {
+        h5,
+        .h5 {
+        <% for (var key in config.elements.h5.tablet) { %>
+          <%= key %>: <%= config.elements.h5.tablet[key] %>;
+        <% } %>
+        }
+      }
+  <% } %>
+  <% if(config.elements.h5.hasOwnProperty('phone')) { %>
+    @media (max-width:  <%= config.media.phone %>) {
+      h5,
+      .h5 {
+      <% for (var key in config.elements.h5.phone) { %>
+        <%= key %>: <%= config.elements.h5.phone[key] %>;
+      <% } %>
+      }
+    }
+  <% } %>
+  
+  <% if(config.elements.h6.hasOwnProperty('desktop')) { %>
+    h6,
+    .h6 {
+    <% for (var key in config.elements.h6.desktop) { %>
+      <%= key %>: <%= config.elements.h6.desktop[key] %>;
+    <% } %>
+    }
+    <% } %>
+    <% if(config.elements.h6.hasOwnProperty('laptop')) { %>
+    @media (max-width:  <%= config.media.laptop %>) {
+      h6,
+      .h6 {
+      <% for (var key in config.elements.h6.laptop) { %>
+        <%= key %>: <%= config.elements.h6.laptop[key] %>;
+      <% } %>
+      }
+    }
+    <% } %>
+    <% if(config.elements.h6.hasOwnProperty('tablet')) { %>
+      @media (max-width:  <%= config.media.tablet %>) {
+        h6,
+        .h6 {
+        <% for (var key in config.elements.h6.tablet) { %>
+          <%= key %>: <%= config.elements.h6.tablet[key] %>;
+        <% } %>
+        }
+      }
+  <% } %>
+  <% if(config.elements.h6.hasOwnProperty('phone')) { %>
+    @media (max-width:  <%= config.media.phone %>) {
+      h6,
+      .h6 {
+      <% for (var key in config.elements.h6.phone) { %>
+        <%= key %>: <%= config.elements.h6.phone[key] %>;
+      <% } %>
+      }
+    }
+  <% } %>
+  
+  <% if(config.elements.p.hasOwnProperty('desktop')) { %>
+    p,
+    .p {
+    <% for (var key in config.elements.p.desktop) { %>
+      <%= key %>: <%= config.elements.p.desktop[key] %>;
+    <% } %>
+    }
+    <% } %>
+    <% if(config.elements.p.hasOwnProperty('laptop')) { %>
+    @media (max-width:  <%= config.media.laptop %>) {
+      p,
+      .p {
+      <% for (var key in config.elements.p.laptop) { %>
+        <%= key %>: <%= config.elements.p.laptop[key] %>;
+      <% } %>
+      }
+    }
+    <% } %>
+    <% if(config.elements.p.hasOwnProperty('tablet')) { %>
+      @media (max-width:  <%= config.media.tablet %>) {
+        p,
+        .p {
+        <% for (var key in config.elements.p.tablet) { %>
+          <%= key %>: <%= config.elements.p.tablet[key] %>;
+        <% } %>
+        }
+      }
+  <% } %>
+  <% if(config.elements.p.hasOwnProperty('phone')) { %>
+    @media (max-width:  <%= config.media.phone %>) {
+      p,
+      .p {
+      <% for (var key in config.elements.p.phone) { %>
+        <%= key %>: <%= config.elements.p.phone[key] %>;
+      <% } %>
+      }
+    }
+  <% } %>
+
+
+  <% if(config.elements.ul.hasOwnProperty('desktop')) { %>
+    ul {
+    <% for (var key in config.elements.ul.desktop) { %>
+      <%= key %>: <%= config.elements.ul.desktop[key] %>;
+    <% } %>
+    }
+    <% } %>
+    <% if(config.elements.ul.hasOwnProperty('laptop')) { %>
+    @media (max-width:  <%= config.media.laptop %>) {
+      ul {
+      <% for (var key in config.elements.ul.laptop) { %>
+        <%= key %>: <%= config.elements.ul.laptop[key] %>;
+      <% } %>
+      }
+    }
+    <% } %>
+    <% if(config.elements.ul.hasOwnProperty('tablet')) { %>
+      @media (max-width:  <%= config.media.tablet %>) {
+        ul {
+        <% for (var key in config.elements.ul.tablet) { %>
+          <%= key %>: <%= config.elements.ul.tablet[key] %>;
+        <% } %>
+        }
+      }
+  <% } %>
+  <% if(config.elements.ul.hasOwnProperty('phone')) { %>
+    @media (max-width:  <%= config.media.phone %>) {
+      ul {
+      <% for (var key in config.elements.ul.phone) { %>
+        <%= key %>: <%= config.elements.ul.phone[key] %>;
+      <% } %>
+      }
+    }
+  <% } %>
+  
+  <% if(config.elements.ol.hasOwnProperty('desktop')) { %>
+    ol {
+    <% for (var key in config.elements.ol.desktop) { %>
+      <%= key %>: <%= config.elements.ol.desktop[key] %>;
+    <% } %>
+    }
+    <% } %>
+    <% if(config.elements.ol.hasOwnProperty('laptop')) { %>
+    @media (max-width:  <%= config.media.laptop %>) {
+      ol {
+      <% for (var key in config.elements.ol.laptop) { %>
+        <%= key %>: <%= config.elements.ol.laptop[key] %>;
+      <% } %>
+      }
+    }
+    <% } %>
+    <% if(config.elements.ol.hasOwnProperty('tablet')) { %>
+      @media (max-width:  <%= config.media.tablet %>) {
+        ol {
+        <% for (var key in config.elements.ol.tablet) { %>
+          <%= key %>: <%= config.elements.ol.tablet[key] %>;
+        <% } %>
+        }
+      }
+  <% } %>
+  <% if(config.elements.ol.hasOwnProperty('phone')) { %>
+    @media (max-width:  <%= config.media.phone %>) {
+      ol {
+      <% for (var key in config.elements.ol.phone) { %>
+        <%= key %>: <%= config.elements.ol.phone[key] %>;
+      <% } %>
+      }
+    }
+  <% } %>
+  
+  <% if(config.elements.dl.hasOwnProperty('desktop')) { %>
+    dl {
+    <% for (var key in config.elements.dl.desktop) { %>
+      <%= key %>: <%= config.elements.dl.desktop[key] %>;
+    <% } %>
+    }
+    <% } %>
+    <% if(config.elements.dl.hasOwnProperty('laptop')) { %>
+    @media (max-width:  <%= config.media.laptop %>) {
+      dl {
+      <% for (var key in config.elements.dl.laptop) { %>
+        <%= key %>: <%= config.elements.dl.laptop[key] %>;
+      <% } %>
+      }
+    }
+    <% } %>
+    <% if(config.elements.dl.hasOwnProperty('tablet')) { %>
+      @media (max-width:  <%= config.media.tablet %>) {
+        dl {
+        <% for (var key in config.elements.dl.tablet) { %>
+          <%= key %>: <%= config.elements.dl.tablet[key] %>;
+        <% } %>
+        }
+      }
+  <% } %>
+  <% if(config.elements.dl.hasOwnProperty('phone')) { %>
+    @media (max-width:  <%= config.media.phone %>) {
+      dl {
+      <% for (var key in config.elements.dl.phone) { %>
+        <%= key %>: <%= config.elements.dl.phone[key] %>;
+      <% } %>
+      }
+    }
+  <% } %>
+
+  
+<% if(config.elements.blockquote.hasOwnProperty('desktop')) { %>
+  blockquote {
+  <% for (var key in config.elements.blockquote.desktop) { %>
+    <%= key %>: <%= config.elements.blockquote.desktop[key] %>;
+  <% } %>
+  }
+  <% } %>
+  <% if(config.elements.blockquote.hasOwnProperty('laptop')) { %>
+  @media (max-width:  <%= config.media.laptop %>) {
+    blockquote {
+    <% for (var key in config.elements.blockquote.laptop) { %>
+      <%= key %>: <%= config.elements.blockquote.laptop[key] %>;
+    <% } %>
+    }
+  }
+  <% } %>
+  <% if(config.elements.blockquote.hasOwnProperty('tablet')) { %>
+    @media (max-width:  <%= config.media.tablet %>) {
+      blockquote {
+      <% for (var key in config.elements.blockquote.tablet) { %>
+        <%= key %>: <%= config.elements.blockquote.tablet[key] %>;
+      <% } %>
+      }
+    }
+<% } %>
+<% if(config.elements.blockquote.hasOwnProperty('phone')) { %>
+  @media (max-width:  <%= config.media.phone %>) {
+    blockquote {
+    <% for (var key in config.elements.blockquote.phone) { %>
+      <%= key %>: <%= config.elements.blockquote.phone[key] %>;
+    <% } %>
+    }
+  }
+<% } %>
+
+
+<% if(config.elements.table.hasOwnProperty('desktop')) { %>
+  table {
+  <% for (var key in config.elements.table.desktop) { %>
+    <%= key %>: <%= config.elements.table.desktop[key] %>;
+  <% } %>
+  }
+  <% } %>
+  <% if(config.elements.table.hasOwnProperty('laptop')) { %>
+  @media (max-width:  <%= config.media.laptop %>) {
+    table {
+    <% for (var key in config.elements.table.laptop) { %>
+      <%= key %>: <%= config.elements.table.laptop[key] %>;
+    <% } %>
+    }
+  }
+  <% } %>
+  <% if(config.elements.table.hasOwnProperty('tablet')) { %>
+    @media (max-width:  <%= config.media.tablet %>) {
+      table {
+      <% for (var key in config.elements.table.tablet) { %>
+        <%= key %>: <%= config.elements.table.tablet[key] %>;
+      <% } %>
+      }
+    }
+<% } %>
+<% if(config.elements.table.hasOwnProperty('phone')) { %>
+  @media (max-width:  <%= config.media.phone %>) {
+    table {
+    <% for (var key in config.elements.table.phone) { %>
+      <%= key %>: <%= config.elements.table.phone[key] %>;
+    <% } %>
+    }
+  }
+<% } %>
+
+
+<% if(config.elements.title.hasOwnProperty('desktop')) { %>
+  .title {
+  <% for (var key in config.elements.title.desktop) { %>
+    <%= key %>: <%= config.elements.title.desktop[key] %>;
+  <% } %>
+  }
+  <% } %>
+  <% if(config.elements.title.hasOwnProperty('laptop')) { %>
+  @media (max-width:  <%= config.media.laptop %>) {
+    .title {
+    <% for (var key in config.elements.title.laptop) { %>
+      <%= key %>: <%= config.elements.title.laptop[key] %>;
+    <% } %>
+    }
+  }
+  <% } %>
+  <% if(config.elements.title.hasOwnProperty('tablet')) { %>
+  @media (max-width:  <%= config.media.tablet %>) {
+    .title {
+    <% for (var key in config.elements.title.tablet) { %>
+      <%= key %>: <%= config.elements.title.tablet[key] %>;
+    <% } %>
+    }
+  }
+<% } %>
+<% if(config.elements.title.hasOwnProperty('phone')) { %>
+  @media (max-width:  <%= config.media.phone %>) {
+    .title {
+    <% for (var key in config.elements.title.phone) { %>
+      <%= key %>: <%= config.elements.title.phone[key] %>;
+    <% } %>
+    }
+  }
+<% } %>
+
+<% if(config.elements.subtitle.hasOwnProperty('desktop')) { %>
+  .subtitle {
+  <% for (var key in config.elements.subtitle.desktop) { %>
+    <%= key %>: <%= config.elements.subtitle.desktop[key] %>;
+  <% } %>
+  }
+  <% } %>
+  <% if(config.elements.subtitle.hasOwnProperty('laptop')) { %>
+  @media (max-width:  <%= config.media.laptop %>) {
+    .subtitle {
+    <% for (var key in config.elements.subtitle.laptop) { %>
+      <%= key %>: <%= config.elements.subtitle.laptop[key] %>;
+    <% } %>
+    }
+  }
+  <% } %>
+  <% if(config.elements.subtitle.hasOwnProperty('tablet')) { %>
+  @media (max-width:  <%= config.media.tablet %>) {
+    .subtitle {
+    <% for (var key in config.elements.subtitle.tablet) { %>
+      <%= key %>: <%= config.elements.subtitle.tablet[key] %>;
+    <% } %>
+    }
+  }
+<% } %>
+<% if(config.elements.subtitle.hasOwnProperty('phone')) { %>
+  @media (max-width:  <%= config.media.phone %>) {
+    .subtitle {
+    <% for (var key in config.elements.subtitle.phone) { %>
+      <%= key %>: <%= config.elements.subtitle.phone[key] %>;
+    <% } %>
+    }
+  }
+<% } %>
+
+<% if(config.elements['body-xxl'].hasOwnProperty('desktop')) { %>
+  .body-xxl {
+  <% for (var key in config.elements['body-xxl'].desktop) { %>
+    <%= key %>: <%= config.elements['body-xxl'].desktop[key] %>;
+  <% } %>
+  }
+  <% } %>
+  <% if(config.elements['body-xxl'].hasOwnProperty('laptop')) { %>
+  @media (max-width:  <%= config.media.laptop %>) {
+    .body-xxl {
+    <% for (var key in config.elements['body-xxl'].laptop) { %>
+      <%= key %>: <%= config.elements['body-xxl'].laptop[key] %>;
+    <% } %>
+    }
+  }
+  <% } %>
+  <% if(config.elements['body-xxl'].hasOwnProperty('tablet')) { %>
+  @media (max-width:  <%= config.media.tablet %>) {
+    .body-xxl {
+    <% for (var key in config.elements['body-xxl'].tablet) { %>
+      <%= key %>: <%= config.elements['body-xxl'].tablet[key] %>;
+    <% } %>
+    }
+  }
+<% } %>
+<% if(config.elements['body-xxl'].hasOwnProperty('phone')) { %>
+  @media (max-width:  <%= config.media.phone %>) {
+    .body-xxl {
+    <% for (var key in config.elements['body-xxl'].phone) { %>
+      <%= key %>: <%= config.elements['body-xxl'].phone[key] %>;
+    <% } %>
+    }
+  }
+<% } %>
+
+
+<% if(config.elements['body-xl'].hasOwnProperty('desktop')) { %>
+  .body-xl {
+  <% for (var key in config.elements['body-xl'].desktop) { %>
+    <%= key %>: <%= config.elements['body-xl'].desktop[key] %>;
+  <% } %>
+  }
+  <% } %>
+  <% if(config.elements['body-xl'].hasOwnProperty('laptop')) { %>
+  @media (max-width:  <%= config.media.laptop %>) {
+    .body-xl {
+    <% for (var key in config.elements['body-xl'].laptop) { %>
+      <%= key %>: <%= config.elements['body-xl'].laptop[key] %>;
+    <% } %>
+    }
+  }
+  <% } %>
+  <% if(config.elements['body-xl'].hasOwnProperty('tablet')) { %>
+  @media (max-width:  <%= config.media.tablet %>) {
+    .body-xl {
+    <% for (var key in config.elements['body-xl'].tablet) { %>
+      <%= key %>: <%= config.elements['body-xl'].tablet[key] %>;
+    <% } %>
+    }
+  }
+<% } %>
+<% if(config.elements['body-xl'].hasOwnProperty('phone')) { %>
+  @media (max-width:  <%= config.media.phone %>) {
+    .body-xl {
+    <% for (var key in config.elements['body-xl'].phone) { %>
+      <%= key %>: <%= config.elements['body-xl'].phone[key] %>;
+    <% } %>
+    }
+  }
+<% } %>
+
+<% if(config.elements['body-l'].hasOwnProperty('desktop')) { %>
+  .body-l {
+  <% for (var key in config.elements['body-l'].desktop) { %>
+    <%= key %>: <%= config.elements['body-l'].desktop[key] %>;
+  <% } %>
+  }
+  <% } %>
+  <% if(config.elements['body-l'].hasOwnProperty('laptop')) { %>
+  @media (max-width:  <%= config.media.laptop %>) {
+    .body-l {
+    <% for (var key in config.elements['body-l'].laptop) { %>
+      <%= key %>: <%= config.elements['body-l'].laptop[key] %>;
+    <% } %>
+    }
+  }
+  <% } %>
+  <% if(config.elements['body-l'].hasOwnProperty('tablet')) { %>
+  @media (max-width:  <%= config.media.tablet %>) {
+    .body-l {
+    <% for (var key in config.elements['body-l'].tablet) { %>
+      <%= key %>: <%= config.elements['body-l'].tablet[key] %>;
+    <% } %>
+    }
+  }
+<% } %>
+<% if(config.elements['body-l'].hasOwnProperty('phone')) { %>
+  @media (max-width:  <%= config.media.phone %>) {
+    .body-l {
+    <% for (var key in config.elements['body-l'].phone) { %>
+      <%= key %>: <%= config.elements['body-l'].phone[key] %>;
+    <% } %>
+    }
+  }
+<% } %>
+
+<% if(config.elements['body-m'].hasOwnProperty('desktop')) { %>
+  .body-m {
+  <% for (var key in config.elements['body-m'].desktop) { %>
+    <%= key %>: <%= config.elements['body-m'].desktop[key] %>;
+  <% } %>
+  }
+  <% } %>
+  <% if(config.elements['body-m'].hasOwnProperty('laptop')) { %>
+  @media (max-width:  <%= config.media.laptop %>) {
+    .body-m {
+    <% for (var key in config.elements['body-m'].laptop) { %>
+      <%= key %>: <%= config.elements['body-m'].laptop[key] %>;
+    <% } %>
+    }
+  }
+  <% } %>
+  <% if(config.elements['body-m'].hasOwnProperty('tablet')) { %>
+  @media (max-width:  <%= config.media.tablet %>) {
+    .body-m {
+    <% for (var key in config.elements['body-m'].tablet) { %>
+      <%= key %>: <%= config.elements['body-m'].tablet[key] %>;
+    <% } %>
+    }
+  }
+<% } %>
+<% if(config.elements['body-m'].hasOwnProperty('phone')) { %>
+  @media (max-width:  <%= config.media.phone %>) {
+    .body-m {
+    <% for (var key in config.elements['body-m'].phone) { %>
+      <%= key %>: <%= config.elements['body-m'].phone[key] %>;
+    <% } %>
+    }
+  }
+<% } %>
+
+<% if(config.elements['body-s'].hasOwnProperty('desktop')) { %>
+  .body-s {
+  <% for (var key in config.elements['body-s'].desktop) { %>
+    <%= key %>: <%= config.elements['body-s'].desktop[key] %>;
+  <% } %>
+  }
+  <% } %>
+  <% if(config.elements['body-s'].hasOwnProperty('laptop')) { %>
+  @media (max-width:  <%= config.media.laptop %>) {
+    .body-s {
+    <% for (var key in config.elements['body-s'].laptop) { %>
+      <%= key %>: <%= config.elements['body-s'].laptop[key] %>;
+    <% } %>
+    }
+  }
+  <% } %>
+  <% if(config.elements['body-s'].hasOwnProperty('tablet')) { %>
+  @media (max-width:  <%= config.media.tablet %>) {
+    .body-s {
+    <% for (var key in config.elements['body-s'].tablet) { %>
+      <%= key %>: <%= config.elements['body-s'].tablet[key] %>;
+    <% } %>
+    }
+  }
+<% } %>
+<% if(config.elements['body-s'].hasOwnProperty('phone')) { %>
+  @media (max-width:  <%= config.media.phone %>) {
+    .body-s {
+    <% for (var key in config.elements['body-s'].phone) { %>
+      <%= key %>: <%= config.elements['body-s'].phone[key] %>;
+    <% } %>
+    }
+  }
+<% } %>
+
+<% if(config.elements['button'].hasOwnProperty('desktop')) { %>
+  button {
+  <% for (var key in config.elements['button'].desktop) { %>
+    <%= key %>: <%= config.elements['button'].desktop[key] %>;
+  <% } %>
+  }
+  <% } %>
+  <% if(config.elements['button'].hasOwnProperty('laptop')) { %>
+  @media (max-width:  <%= config.media.laptop %>) {
+    button {
+    <% for (var key in config.elements['button'].laptop) { %>
+      <%= key %>: <%= config.elements['button'].laptop[key] %>;
+    <% } %>
+    }
+  }
+  <% } %>
+  <% if(config.elements['button'].hasOwnProperty('tablet')) { %>
+  @media (max-width:  <%= config.media.tablet %>) {
+    button {
+    <% for (var key in config.elements['button'].tablet) { %>
+      <%= key %>: <%= config.elements['button'].tablet[key] %>;
+    <% } %>
+    }
+  }
+<% } %>
+<% if(config.elements['button'].hasOwnProperty('phone')) { %>
+  @media (max-width:  <%= config.media.phone %>) {
+    button {
+    <% for (var key in config.elements['button'].phone) { %>
+      <%= key %>: <%= config.elements['button'].phone[key] %>;
+    <% } %>
+    }
+  }
+<% } %>
+
+<% if(config.elements['caption'].hasOwnProperty('desktop')) { %>
+  .caption {
+  <% for (var key in config.elements['caption'].desktop) { %>
+    <%= key %>: <%= config.elements['caption'].desktop[key] %>;
+  <% } %>
+  }
+  <% } %>
+  <% if(config.elements['caption'].hasOwnProperty('laptop')) { %>
+  @media (max-width:  <%= config.media.laptop %>) {
+    .caption {
+    <% for (var key in config.elements['caption'].laptop) { %>
+      <%= key %>: <%= config.elements['caption'].laptop[key] %>;
+    <% } %>
+    }
+  }
+  <% } %>
+  <% if(config.elements['caption'].hasOwnProperty('tablet')) { %>
+  @media (max-width:  <%= config.media.tablet %>) {
+    .caption {
+    <% for (var key in config.elements['caption'].tablet) { %>
+      <%= key %>: <%= config.elements['caption'].tablet[key] %>;
+    <% } %>
+    }
+  }
+<% } %>
+<% if(config.elements['caption'].hasOwnProperty('phone')) { %>
+  @media (max-width:  <%= config.media.phone %>) {
+    .caption {
+    <% for (var key in config.elements['caption'].phone) { %>
+      <%= key %>: <%= config.elements['caption'].phone[key] %>;
+    <% } %>
+    }
+  }
+<% } %>
+
+<% if(config.elements['overline'].hasOwnProperty('desktop')) { %>
+  .overline {
+  <% for (var key in config.elements['overline'].desktop) { %>
+    <%= key %>: <%= config.elements['overline'].desktop[key] %>;
+  <% } %>
+  }
+  <% } %>
+  <% if(config.elements['overline'].hasOwnProperty('laptop')) { %>
+  @media (max-width:  <%= config.media.laptop %>) {
+    .overline {
+    <% for (var key in config.elements['overline'].laptop) { %>
+      <%= key %>: <%= config.elements['overline'].laptop[key] %>;
+    <% } %>
+    }
+  }
+  <% } %>
+  <% if(config.elements['overline'].hasOwnProperty('tablet')) { %>
+  @media (max-width:  <%= config.media.tablet %>) {
+    .overline {
+    <% for (var key in config.elements['overline'].tablet) { %>
+      <%= key %>: <%= config.elements['overline'].tablet[key] %>;
+    <% } %>
+    }
+  }
+<% } %>
+<% if(config.elements['overline'].hasOwnProperty('phone')) { %>
+  @media (max-width:  <%= config.media.phone %>) {
+    .overline {
+    <% for (var key in config.elements['overline'].phone) { %>
+      <%= key %>: <%= config.elements['overline'].phone[key] %>;
+    <% } %>
+    }
+  }
+<% } %>

@@ -1,0 +1,25 @@
+.color-block {
+    padding: 28px;
+    border: 1px solid #F0F0F0;
+}
+
+.color-block__inner {
+    position: relative;
+    padding-bottom: 50%;
+    border: 1px solid #F0F0F0;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.color-block__name {
+    position: absolute;
+    top: 14%;
+    left: 11%;
+}
+
+.color-block__hex {
+    position: absolute;
+    bottom: 14%;
+    left: 11%;
+}

@@ -1,0 +1,74 @@
+.header {
+  border-bottom: 1px solid #000000;
+}
+
+/* containers */
+
+.header__container {
+  padding: 8px; /* must be equal to .main-menu__link padding */
+}
+
+/* logo */
+
+.header__logo {
+  position: absolute;
+  top: 8px; /* .header__container padding not calculated */
+  left: 8px;
+}
+
+.logo a {
+  display: block;
+  padding: 8px;
+}
+
+.logo a img {
+  display: block; /* normalize geometry img inside a */
+}
+
+/* main-menu */
+
+.header__main-menu-container {
+  margin: 0 72px 0 102px; /* 8 + 86 + 8 = 102 */  /* 8 + 20 + 8 + 8 + 20 + 8 + (8 - 8) */
+}
+
+.main-menu {
+  padding: 8px 0px; /* We make top/bottom padding, because lists items is inline, and there don't work vertical padding, only horizontal: https://developer.mozilla.org/en-US/docs/Web/CSS/padding-inline */ 
+}
+
+.main-menu__item {
+  padding: 0px 8px;
+  display: inline;
+}
+
+.main-menu__link {
+  /*padding: 0px 8px;*/ /* must be equal to .header__container padding */
+}
+
+/* social */
+
+.header__social-links { /* TODO maybe rename to social links */
+  position: absolute;
+  top: 8px;
+  right: 8px; 
+  padding: 0px;
+}
+
+.social-links__item {
+  float: left;
+}
+
+.social-links__link {
+  display: block;
+  padding: 8px;
+}
+
+.social-links__link img {
+    display: block;
+}
+
+/* main content */
+
+.main__container {
+  padding: 8px;
+}
+

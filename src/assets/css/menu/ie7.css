@@ -1,0 +1,12 @@
+/* containers */
+/* Since IE 7, the max-width property works */
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.header__container {
+  position: relative;
+}
+

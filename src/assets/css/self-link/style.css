@@ -1,0 +1,78 @@
+.anchor-title a,
+.anchor-title span,
+.anchor-title div {
+    display: inline;
+    vertical-align: middle;
+}
+
+.anchor-title__link {
+    text-decoration: none;
+}
+
+.anchor-title__link {
+    margin-left: 8px;
+}
+
+.animation-supported .anchor-title__message-container {
+    position: relative;
+    margin-left: 4px;
+    padding: 0 8px;
+}
+
+.animation-supported .anchor-title__link {
+    position: relative;
+    z-index: 2;
+}
+
+.animation-supported .anchor-title__message-label {
+    vertical-align: middle;
+    opacity: 0;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 300;
+    color: #4671D5;
+}
+
+.animation-supported .anchor-title__link:hover + .anchor-title__message-container .anchor-title__message-label,
+.animation-supported .anchor-title__message-label--clicked {
+    opacity: 1;
+}
+
+.animation-supported .anchor-title__message-action {
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 300;
+    color: #4671D5;
+    white-space: nowrap;
+    animation-duration: 0.6s;
+    animation-name: bubbling, link-appear;
+    animation-fill-mode: forwards;
+    transform: translateX(-50%); 
+}
+
+@keyframes link-appear {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes bubbling {
+    from {
+        bottom: -16px;
+    }
+
+    to {
+        bottom: 16px;
+    }
+}

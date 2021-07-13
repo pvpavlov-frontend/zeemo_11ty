@@ -1,0 +1,96 @@
+.carousel__item-buffer {
+    padding: 8px;
+}
+
+.carousel__image {
+    width: 100%;
+}
+
+.carousel__image img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.carousel__divider {
+    display: none;
+}
+
+/* Clearfix taken from here: http://nicolasgallagher.com/micro-clearfix-hack/. */
+
+.js .carousel__controls.clearfix,
+.js .carousel__items.clearfix { 
+    zoom: 1; 
+}
+
+.js .carousel__controls.clearfix:before,
+.js .carousel__items.clearfix:before,
+.js .carousel__controls.clearfix:after,
+.js .carousel__items.clearfix:after { 
+    content: "";
+    display: table; 
+}
+
+.js .carousel__controls.clearfix:after,
+.js .carousel__items.clearfix:after {
+    clear: both; 
+}
+
+.js .carousel {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.js .carousel__controls {
+    z-index: 2;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    padding: 4px;
+}
+
+.js .carousel__control-buffer {
+    padding: 4px;
+    float: left;
+}
+
+.js .carousel__control {
+    display: block;
+    font-family: monospace;
+}
+
+.js .carousel__items {
+    z-index: 1;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.js .carousel__item {
+    float: left; 
+}
+
+.js .carousel__item-inner {
+    position: relative;
+}
+
+.js .carousel__image {
+    position: relative;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+}
+
+.js .carousel__image img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.js .carousel__caption {
+    z-index: 3;
+    background-color: #eeeeee;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}

@@ -1,0 +1,59 @@
+body { 
+    margin: 0;
+}
+
+/* Clearfix taken from here: http://nicolasgallagher.com/micro-clearfix-hack/. */
+
+.clearfix { 
+    zoom: 1; 
+}
+
+.clearfix:before,
+.clearfix:after { 
+    content: "";
+    display: table; 
+}
+
+.clearfix:after {
+    clear: both; 
+}
+
+.container {
+    padding: 8px;
+    margin: 0 auto;
+}
+
+.blocks-container {
+    padding: 0 1px; /* Without this rule, blocks will line up in column. Paddings must be at least nominal */
+}
+
+.blocks-container--2 .blocks-container__item { 
+    float: left; 
+    width: 50%;
+}
+
+.blocks-container--3 .blocks-container__item { 
+    float: left; 
+    width: 33.33%;
+}
+
+.blocks-container--4 .blocks-container__item { 
+    float: left; 
+    width: 25%;
+}
+
+.blocks-container--5 .blocks-container__item { 
+    float: left; 
+    width: 20%;
+}
+
+.blocks-container--6 .blocks-container__item { 
+    float: left; 
+    width: 16.66%;
+}
+
+.mock-block {
+     /* Just for demo. */
+    background-color: #EEEEEE;
+    border: 1px solid #000000;
+}

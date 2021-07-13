@@ -1,0 +1,90 @@
+{
+    "Theme" : {
+        "Theme Primary": {
+            "color" : "#0571f0",
+            "label" : "#FFFFFF"
+        },
+        "Theme LighterAlt": {
+            "color" : "#EFF6FC",
+            "label" : "#000000"
+        },
+        "Theme Lighter": {
+            "color" : "#DEECF9",
+            "label" : "#000000"
+        },
+        "Theme Light": {
+            "color" : "#C7E0F4",
+            "label" : "#000000"
+        },
+        "Theme Tertiary": {
+            "color" : "#2B88D8",
+            "label" : "#FFFFFF"
+        },
+        "Theme DarkAlt": {
+            "color" : "#0571f0",
+            "label" : "#FFFFFF"
+        },
+        "Theme Dark": {
+            "color" : "#0558F0",
+            "label" : "#FFFFFF"
+        },
+        "Theme Darker": {
+            "color" : "#004578",
+            "label" : "#FFFFFF"
+        }
+    },
+    "Greys" : {
+        "White" : {
+            "color" : "#FFFFFF",
+            "label" : "#000000" 
+        },
+        "grey10" : {
+            "color" : "#F3F6F9",
+            "label" : "#000000" 
+        },
+        "grey20" : {
+            "color" : "#F3F2F1",
+            "label" : "#000000" 
+        },
+        "grey30" : {
+            "color" : "#EDEBE9",
+            "label" : "#000000" 
+        },
+        "grey40" : {
+            "color" : "#E1DFDD",
+            "label" : "#000000" 
+        },
+        "grey50" : {
+            "color" : "#D2D0CE",
+            "label" : "#000000" 
+        },
+        "grey60" : {
+            "color" : "#C8C6C4",
+            "label" : "#FFFFFF" 
+        },
+        "grey90" : {
+            "color" : "#A19F9D",
+            "label" : "#FFFFFF" 
+        },
+        "grey130" : {
+            "color" : "#605E5C",
+            "label" : "#FFFFFF" 
+        },
+        "grey150" : {
+            "color" : "#3B3A39",
+            "label" : "#FFFFFF" 
+        },
+        "grey160" : {
+            "color" : "#323130",
+            "label" : "#FFFFFF" 
+        },
+        "grey190" : {
+            "color" : "#201F1E",
+            "label" : "#FFFFFF" 
+        },
+        "Black" : {
+            "color" : "#06111D",
+            "label" : "#FFFFFF" 
+        }
+    }
+}

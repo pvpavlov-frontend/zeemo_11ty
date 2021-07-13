@@ -1,0 +1,12 @@
+@media (max-width: 599px) {
+    .blocks-container--wrap .blocks-container__item {
+        display: block;
+        width: 100%;
+        float: none;
+    }
+
+    .blocks-container--wrap .blocks-container__item--half-width {
+        width: 50%;
+        float: left;
+    }
+}

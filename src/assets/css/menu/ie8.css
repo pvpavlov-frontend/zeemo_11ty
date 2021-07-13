@@ -1,0 +1,8 @@
+/* social */
+
+/* Since IE 8, we can remove for list list-style property. */
+
+.social-links {
+  list-style: none;
+}
+

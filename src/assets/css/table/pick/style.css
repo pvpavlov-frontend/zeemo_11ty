@@ -1,0 +1,34 @@
+body {
+    min-height: 200vh;
+}
+
+.disabled {
+    display: none;
+}
+
+.table-pick {
+    border-collapse: collapse;
+}
+
+.table-pick th,
+.table-pick td {
+    padding: 8px;
+}
+
+.table-pick thead th {
+    color: #ffffff;
+    background-color: #0078d4;
+}
+
+.table-pick tbody tr:nth-child(1) th {
+    color: #ffffff;
+    background-color: #3A9DEA;
+}
+
+.table-pick tbody tr:nth-child(odd) {
+    background-color: #f3f2f1;
+}
+
+.table-pick tbody tr:nth-child(even) {
+    background-color: #e1dfdd;
+}

@@ -1,0 +1,32 @@
+@supports (display: flex) {
+    .blocks-container {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+
+    .blocks-container__full-height-parrent {
+        display: flex;
+    }
+
+    .blocks-container__full-height-child {
+        height: 100%;
+        box-sizing: border-box;
+    }
+
+    .clearfix::before,
+    .clearfix::after {
+        content: none;
+    }
+
+    @media (max-width: 599px) {
+        /* .blocks-container--wrap {
+            flex-direction: column;
+        } */
+
+        .blocks-container--wrap .blocks-container__item--half-width {
+            width: 50%;
+            float: none;
+        }
+    }
+}

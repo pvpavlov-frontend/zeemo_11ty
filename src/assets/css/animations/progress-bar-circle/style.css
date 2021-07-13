@@ -1,0 +1,354 @@
+.frame-container {
+  width: 696px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  padding: 32px;
+  background: #F6F6F6;
+}
+
+.frame {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  background: #FFFFFF;
+  font-family: "Roboto Mono", monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.last-screen {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aliceblue;
+}
+
+
+.indicator {
+  margin: 0 auto;
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+
+.indicator__svg {
+  position: absolute;
+  z-index: 1;
+}
+
+.indicator--1 .indicator__svg-background,
+.animation-supported .scrolled.indicator--1 .indicator__svg-background {
+  fill: rgba(12, 206, 107, 0.1);
+}
+
+.animation-supported .indicator--1 .indicator__svg-background {
+  fill: rgba(255, 164, 0, 0.1);
+}
+
+.animated.indicator--1  .indicator__svg-background {
+  animation: background-1 2s ease-in-out forwards;
+  animation-delay: 2s;
+}
+
+.indicator--2 .indicator__svg-background,
+.animation-supported .scrolled.indicator--2 .indicator__svg-background {
+  fill: rgba(12, 206, 107, 0.1);
+}
+
+.animation-supported .indicator--2 .indicator__svg-background {
+  fill: rgba(255, 78, 66, 0.1);
+}
+
+.animated.indicator--2  .indicator__svg-background {
+  animation: background-2 2s ease-in-out forwards;
+  animation-delay: 2s;
+}
+
+.indicator--3 .indicator__svg-background,
+.animation-supported .scrolled.indicator--3 .indicator__svg-background {
+  fill: rgba(255, 164, 0, 0.1);
+}
+
+.animation-supported .indicator--3 .indicator__svg-background {
+  fill: rgba(255, 78, 66, 0.1);
+}
+
+.animated.indicator--3  .indicator__svg-background {
+  animation: background-3 2s ease-in-out forwards;
+  animation-delay: 2s;
+}
+
+.indicator--4 .indicator__svg-background,
+.animation-supported .scrolled.indicator--4 .indicator__svg-background  {
+  fill: rgba(255, 164, 0, 0.1);
+}
+
+.animation-supported .indicator--4 .indicator__svg-background {
+  fill: rgba(255, 78, 66, 0.1);
+}
+
+.animated.indicator--4  .indicator__svg-background {
+  animation: background-4 2s ease-in-out forwards;
+  animation-delay: 2s;
+}
+
+.indicator__svg-progress {
+  fill: none;
+  stroke-width: 8px;
+  stroke-linecap: round;
+  stroke-dasharray: 351.86; /* C = 2 * PI * R. (R = 56) */
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+
+.indicator--1 .indicator__svg-progress,
+.animation-supported .scrolled.indicator--1 .indicator__svg-progress {
+  stroke: #0CCE6B;
+  stroke-dashoffset: 28.149; /* (100 - percents)/100) * C */
+}
+
+.animation-supported .indicator--1 .indicator__svg-progress {
+  stroke: #FFA215;
+  stroke-dashoffset: 109.076;
+}
+
+.animated.indicator--1 .indicator__svg-progress {
+  animation: progress-1 2s ease-in-out forwards;
+  animation-delay: 2s;
+}
+
+.indicator--2 .indicator__svg-progress,
+.animation-supported .scrolled.indicator--2 .indicator__svg-progress {
+  stroke: #0CCE6B;
+  stroke-dashoffset: 35.186;
+}
+
+.animation-supported .indicator--2 .indicator__svg-progress {
+  stroke: #FF4E42;
+  stroke-dashoffset: 218.152;
+}
+
+.animated.indicator--2 .indicator__svg-progress {
+  animation: progress-2 2s ease-in-out forwards;
+  animation-delay: 2s;
+}
+
+.indicator--3 .indicator__svg-progress,
+.animation-supported .scrolled.indicator--3 .indicator__svg-progress {
+  stroke: #FFA215;
+  stroke-dashoffset: 133.706;
+}
+
+.animation-supported .indicator--3 .indicator__svg-progress {
+  stroke: #FF4E42;
+  stroke-dashoffset: 323.710;
+}
+
+.animated.indicator--3 .indicator__svg-progress {
+  animation: progress-3 2s ease-in-out forwards;
+  animation-delay: 2s;
+}
+
+.indicator--4 .indicator__svg-progress,
+.animation-supported .scrolled.indicator--4 .indicator__svg-progress {
+  stroke: #FFA215;
+  stroke-dashoffset: 102.039;
+}
+
+.animation-supported .indicator--4 .indicator__svg-progress {
+  stroke: #FF4E42;
+  stroke-dashoffset: 295.561;
+}
+
+.animated.indicator--4 .indicator__svg-progress {
+  animation: progress-4 2s ease-in-out forwards;
+  animation-delay: 2s;
+}
+
+.indicator__text {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  top: 50%;
+  font-size: 42px;
+  text-align: center;
+  transform: translateY(-50%);
+}
+
+.indicator--1 .indicator__text,
+.animation-supported .scrolled.indicator--1 .indicator__text {
+  color: #0CCE6B;
+}
+
+.animation-supported .indicator--1 .indicator__text {
+  color: #FFA215;
+}
+
+.animated.indicator--1 .indicator__text {
+  animation: text-1 2s ease-in-out forwards;
+  animation-delay: 2s;
+}
+
+.indicator--2 .indicator__text,
+.animation-supported .scrolled.indicator--2 .indicator__text {
+  color: #0CCE6B;
+}
+
+.animation-supported .indicator--2 .indicator__text {
+  color: #FF4E42;
+}
+
+.animated.indicator--2 .indicator__text {
+  animation: text-2 2s ease-in-out forwards;
+  animation-delay: 2s;
+}
+
+.indicator--3 .indicator__text,
+.animation-supported .scrolled.indicator--3 .indicator__text {
+  color: #FFA215;
+}
+
+.animation-supported .indicator--3 .indicator__text {
+  color: #FF4E42;
+}
+
+.animated.indicator--3 .indicator__text {
+  animation: text-3 2s ease-in-out forwards;
+  animation-delay: 2s;
+}
+
+.indicator--4 .indicator__text,
+.animation-supported .scrolled.indicator--4 .indicator__text {
+  color: #FFA215;
+}
+
+.animation-supported .indicator--4 .indicator__text {
+  color: #FF4E42;
+}
+
+.animated.indicator--4 .indicator__text {
+  animation: text-4 2s ease-in-out forwards;
+  animation-delay: 2s;
+}
+
+@keyframes progress-1 {
+  from {
+    stroke: #FFA215;
+    stroke-dashoffset: 109.076;
+  }
+  to {
+    stroke: #0CCE6B;
+    stroke-dashoffset: 28.149;
+  }
+}
+
+@keyframes background-1 {
+  from {
+    fill: rgba(255, 164, 0, 0.1);
+  }
+  to {
+    fill: rgba(12, 206, 107, 0.1);
+  }
+}
+
+@keyframes text-1 {
+  from {
+    color: #FFA215;
+  }
+    to {
+    color: #0CCE6B;
+  }
+}
+
+@keyframes progress-2 {
+  from {
+    stroke: #FF4E42;
+    stroke-dashoffset: 218.152;
+  }
+  to {
+    stroke: #0CCE6B;
+    stroke-dashoffset: 35.186;
+  }
+}
+
+@keyframes background-2 {
+  from {
+    fill: rgba(255, 78, 66, 0.1);
+  }
+  to {
+    fill: rgba(12, 206, 107, 0.1);
+  }
+}
+
+@keyframes text-2 {
+    from {
+        color: #FF4E42;
+    }
+      to {
+        color: #0CCE6B;
+    }
+}
+
+@keyframes progress-3{
+  from {
+    stroke: #FF4E42;
+    stroke-dashoffset: 323.710;
+  }
+  to {
+    stroke: #FFA215;
+    stroke-dashoffset: 133.706;
+  }
+}
+
+@keyframes background-3 {
+  from {
+    fill: rgba(255, 78, 66, 0.1);
+  }
+  to {
+    fill: rgba(255, 164, 0, 0.1);
+  }
+}
+
+@keyframes text-3 {
+  from {
+      color: #FF4E42;
+  }
+    to {
+      color: #FFA215;
+  }
+}
+
+@keyframes progress-4 {
+  from {
+    stroke: #FF4E42;
+    stroke-dashoffset: 295.561;
+  }
+  to {
+    stroke: #FFA215;
+    stroke-dashoffset: 102.039;
+  }
+}
+
+@keyframes background-4 {
+  from {
+    fill: rgba(255, 78, 66, 0.1);
+  }
+  to {
+    fill: rgba(255, 164, 0, 0.1);
+  }
+}
+
+@keyframes text-4 {
+  from {
+      color: #FF4E42;
+  }
+    to {
+      color: #FFA215;
+  }
+}

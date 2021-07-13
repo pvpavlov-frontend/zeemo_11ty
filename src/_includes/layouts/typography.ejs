@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Typography</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../assets/css/design-system/typography/style.css">
+    <link rel="stylesheet" href="../../../assets/css/config.css">
+    <style>
+        .ds * {
+          padding: 0;
+        }
+      </style>
+</head>
+
+
+<body class="ds">
+    <div class="dimensional-container">
+      <div class="ds__container">
+        <div class="ds__content">
+          <div class="dimensional-container">
+            <div class="spacer-100"></div>
+            <div class="typography-descripton">TYPEFACE</div>
+            <div class="font-family">Roboto</div>
+            <div class="spacer-64"></div>
+            <div class="typography-descripton">FONT WEIGHT</div>
+            <div class="spacer-16"></div>
+            <div class="typography-items">
+              <div class="item no-flex">
+                <div class="typography__title normal">Aa</div>
+                <div class="item__desc">
+                  <div class="item__weight-name normal">
+                    Roboto<br />
+                    Regular
+                  </div>
+                  <div class="item__weight">400</div>
+                </div>
+              </div>
+              <div class="item no-flex">
+                <div class="typography__title medium">Aa</div>
+                <div class="item__desc">
+                  <div class="item__weight-name medium">
+                    Roboto<br />
+                    Medium
+                  </div>
+                  <div class="item__weight">500</div>
+                </div>
+              </div>
+              <div class="item no-flex">
+                <div class="typography__title bold">Aa</div>
+                <div class="item__desc">
+                  <div class="item__weight-name bold">
+                    Roboto<br />
+                    Bold
+                  </div>
+                  <div class="item__weight">700</div>
+                </div>
+              </div>
+              <div class="item no-flex">
+                <div class="typography__title black">Aa</div>
+                <div class="item__desc">
+                  <div class="item__weight-name black">
+                    Roboto<br />
+                    Black
+                  </div>
+                  <div class="item__weight">900</div>
+                </div>
+              </div>
+            </div>
+            <div class="spacer-50"></div>
+            <table style="width: 100%">
+              <tr>
+                <th class="descripton">STYLE / fallback</th>
+                <th class="descripton">TYPEFACE</th>
+                <th class="descripton">WEIGHT</th>
+                <th class="descripton">SIZE</th>
+                <th class="descripton">LINE HEIGHT</th>
+                <th class="descripton">WORD SPACING</th>
+                <th class="descripton">LETTER SPACING</th>
+              </tr>
+
+              <% if(config.elements.h1.hasOwnProperty('desktop')) { %>
+                <tr class="f_1">
+                  <td><h1>Heading h1</h1></td>
+                  <% for (var key in config.elements.h1.desktop) { %>
+                    <% if(key !== "padding" && key !== "margin") { %>
+                      <% if(key == "font-size" || key == "line-height") { %>
+                        <td><%= config.elements.h1.desktop[key] %>/<%= config.elements.h1.laptop[key] %>/<%= config.elements.h1.tablet[key] %>/<%= config.elements.h1.phone[key] %></td>
+                        <% } else { %>
+                        <td><%= config.elements.h1.desktop[key] %></td>
+                      <% } %>
+                    <% } %>
+                  <% } %>
+                  <td>Sentence</td>
+                </tr>
+                <% } %>
+
+                <tr class="f_2">
+                  <td class="classes">classes</td>
+                  <td class="classes">Arial</td>
+                  <td class="classes">900</td>
+                  <td class="classes">64px / 48px</td>
+                  <td class="classes">72px / 56px</td>
+                  <td class="classes">0px</td>
+                  <td class="classes">0px</td>
+                  <td class="classes">Sentence</td>
+                </tr>
+
+                <% if(config.elements.h2.hasOwnProperty('desktop')) { %>
+                  <tr>
+                    <td><h2>Heading h2</h2></td>
+                    <% for (var key in config.elements.h2.desktop) { %>
+                      <% if(key !== "padding" && key !== "margin") { %>
+                        <% if(key == "font-size" || key == "line-height") { %>
+                          <td><%= config.elements.h2.desktop[key] %>/<%= config.elements.h2.laptop[key] %>/<%= config.elements.h2.tablet[key] %>/<%= config.elements.h2.phone[key] %></td>
+                          <% } else { %>
+                          <td><%= config.elements.h2.desktop[key] %></td>
+                        <% } %>
+                      <% } %>
+                    <% } %>
+                    <td>Sentence</td>
+                  </tr>
+                  <% } %>
+
+                  <tr>
+                    <td class="classes">classes</td>
+                    <td class="classes">Arial</td>
+                    <td class="classes">900</td>
+                    <td class="classes">64px / 48px</td>
+                    <td class="classes">72px / 56px</td>
+                    <td class="classes">0px</td>
+                    <td class="classes">0px</td>
+                    <td class="classes">Sentence</td>
+                  </tr>
+
+                  <% if(config.elements.h3.hasOwnProperty('desktop')) { %>
+                    <tr class="f_1">
+                      <td><h3>Heading h3</h3></td>
+                      <% for (var key in config.elements.h3.desktop) { %>
+                        <% if(key !== "padding" && key !== "margin") { %>
+                          <% if(key == "font-size" || key == "line-height") { %>
+                            <td><%= config.elements.h3.desktop[key] %>/<%= config.elements.h3.laptop[key] %>/<%= config.elements.h3.tablet[key] %>/<%= config.elements.h3.phone[key] %></td>
+                            <% } else { %>
+                            <td><%= config.elements.h3.desktop[key] %></td>
+                          <% } %>
+                        <% } %>
+                      <% } %>
+                      <td>Sentence</td>
+                    </tr>
+                    <% } %>
+
+                    <tr class="f_2">
+                      <td class="classes">classes</td>
+                      <td class="classes">Arial</td>
+                      <td class="classes">900</td>
+                      <td class="classes">64px / 48px</td>
+                      <td class="classes">72px / 56px</td>
+                      <td class="classes">0px</td>
+                      <td class="classes">0px</td>
+                      <td class="classes">Sentence</td>
+                    </tr>
+
+                    <% if(config.elements.h4.hasOwnProperty('desktop')) { %>
+                      <tr>
+                        <td><h4>Heading h4</h4></td>
+                        <% for (var key in config.elements.h4.desktop) { %>
+                          <% if(key !== "padding" && key !== "margin") { %>
+                            <% if(key == "font-size" || key == "line-height") { %>
+                              <td><%= config.elements.h4.desktop[key] %>/<%= config.elements.h4.laptop[key] %>/<%= config.elements.h4.tablet[key] %>/<%= config.elements.h4.phone[key] %></td>
+                              <% } else { %>
+                              <td><%= config.elements.h4.desktop[key] %></td>
+                            <% } %>
+                          <% } %>
+                        <% } %>
+                        <td>Sentence</td>
+                      </tr>
+                    <% } %>
+
+                    <tr>
+                      <td class="classes">classes</td>
+                      <td class="classes">Arial</td>
+                      <td class="classes">900</td>
+                      <td class="classes">64px / 48px</td>
+                      <td class="classes">72px / 56px</td>
+                      <td class="classes">0px</td>
+                      <td class="classes">0px</td>
+                      <td class="classes">Sentence</td>
+                    </tr>
+
+                    <% if(config.elements.h5.hasOwnProperty('desktop')) { %>
+                      <tr class="f_1">
+                        <td><h5>Heading h5</h5></td>
+                        <% for (var key in config.elements.h5.desktop) { %>
+                          <% if(key !== "padding" && key !== "margin") { %>
+                            <% if(key == "font-size" || key == "line-height") { %>
+                              <td><%= config.elements.h5.desktop[key] %>/<%= config.elements.h5.laptop[key] %>/<%= config.elements.h5.tablet[key] %>/<%= config.elements.h5.phone[key] %></td>
+                              <% } else { %>
+                              <td><%= config.elements.h5.desktop[key] %></td>
+                            <% } %>
+                          <% } %>
+                        <% } %>
+                        <td>Sentence</td>
+                      </tr>
+                      <% } %>
+
+                      <tr class="f_2">
+                        <td class="classes">classes</td>
+                        <td class="classes">Arial</td>
+                        <td class="classes">900</td>
+                        <td class="classes">64px / 48px</td>
+                        <td class="classes">72px / 56px</td>
+                        <td class="classes">0px</td>
+                        <td class="classes">0px</td>
+                        <td class="classes">Sentence</td>
+                      </tr>
+  
+                      <% if(config.elements.h6.hasOwnProperty('desktop')) { %>
+                        <tr>
+                          <td><h6>Heading h6</h6></td>
+                          <% for (var key in config.elements.h6.desktop) { %>
+                            <% if(key !== "padding" && key !== "margin") { %>
+                              <% if(key == "font-size" || key == "line-height") { %>
+                                <td><%= config.elements.h6.desktop[key] %>/<%= config.elements.h6.laptop[key] %>/<%= config.elements.h6.tablet[key] %>/<%= config.elements.h6.phone[key] %></td>
+                                <% } else { %>
+                                <td><%= config.elements.h6.desktop[key] %></td>
+                              <% } %>
+                            <% } %>
+                          <% } %>
+                          <td>Sentence</td>
+                        </tr>
+                      <% } %>
+
+                      <tr>
+                        <td class="classes">classes</td>
+                        <td class="classes">Arial</td>
+                        <td class="classes">900</td>
+                        <td class="classes">64px / 48px</td>
+                        <td class="classes">72px / 56px</td>
+                        <td class="classes">0px</td>
+                        <td class="classes">0px</td>
+                        <td class="classes">Sentence</td>
+                      </tr>
+                        
+                      <% if(config.elements.p.hasOwnProperty('desktop')) { %>
+                        <tr class="f_1">
+                          <td><p>Paragraph</p></td>
+                          <% for (var key in config.elements.p.desktop) { %>
+                            <% if(key !== "padding" && key !== "margin") { %>
+                              <% if(key == "font-size" || key == "line-height") { %>
+                                <td><%= config.elements.p.desktop[key] %>/<%= config.elements.p.laptop[key] %>/<%= config.elements.p.tablet[key] %>/<%= config.elements.p.phone[key] %></td>
+                                <% } else { %>
+                                <td><%= config.elements.p.desktop[key] %></td>
+                              <% } %>
+                            <% } %>
+                          <% } %>
+                          <td>Sentence</td>
+                        </tr>
+                      <% } %>
+
+                      <tr class="f_2">
+                        <td class="classes">classes</td>
+                        <td class="classes">Arial</td>
+                        <td class="classes">900</td>
+                        <td class="classes">64px / 48px</td>
+                        <td class="classes">72px / 56px</td>
+                        <td class="classes">0px</td>
+                        <td class="classes">0px</td>
+                        <td class="classes">Sentence</td>
+                      </tr>
+                                              
+                      <% if(config.elements.title.hasOwnProperty('desktop')) { %>
+                        <tr>
+                          <td><span class="title">title</span></td>
+                          <% for (var key in config.elements.title.desktop) { %>
+                            <% if(key !== "padding" && key !== "margin") { %>
+                              <% if(key == "font-size" || key == "line-height") { %>
+                                <td><%= config.elements.title.desktop[key] %>/<%= config.elements.title.laptop[key] %>/<%= config.elements.title.tablet[key] %>/<%= config.elements.title.phone[key] %></td>
+                                <% } else { %>
+                                <td><%= config.elements.title.desktop[key] %></td>
+                              <% } %>
+                            <% } %>
+                          <% } %>
+                          <td>Sentence</td>
+                        </tr>
+                      <% } %>
+
+                      <tr>
+                        <td class="classes">classes</td>
+                        <td class="classes">Arial</td>
+                        <td class="classes">900</td>
+                        <td class="classes">64px / 48px</td>
+                        <td class="classes">72px / 56px</td>
+                        <td class="classes">0px</td>
+                        <td class="classes">0px</td>
+                        <td class="classes">Sentence</td>
+                      </tr>
+
+                      <% if(config.elements.subtitle.hasOwnProperty('desktop')) { %>
+                        <tr class="f_1">
+                          <td><span class="subtitle">subtitle</span></td>
+                          <% for (var key in config.elements.subtitle.desktop) { %>
+                            <% if(key !== "padding" && key !== "margin") { %>
+                              <% if(key == "font-size" || key == "line-height") { %>
+                                <td><%= config.elements.subtitle.desktop[key] %>/<%= config.elements.subtitle.laptop[key] %>/<%= config.elements.subtitle.tablet[key] %>/<%= config.elements.subtitle.phone[key] %></td>
+                                <% } else { %>
+                                <td><%= config.elements.subtitle.desktop[key] %></td>
+                              <% } %>
+                            <% } %>
+                          <% } %>
+                          <td>Sentence</td>
+                        </tr>
+                      <% } %>
+
+                      <tr class="f_2">
+                        <td class="classes">classes</td>
+                        <td class="classes">Arial</td>
+                        <td class="classes">900</td>
+                        <td class="classes">64px / 48px</td>
+                        <td class="classes">72px / 56px</td>
+                        <td class="classes">0px</td>
+                        <td class="classes">0px</td>
+                        <td class="classes">Sentence</td>
+                      </tr>
+                      
+                      <% if(config.elements['body-xxl'].hasOwnProperty('desktop')) { %>
+                        <tr>
+                          <td><span class="body-xxl">Body XXL</span></td>
+                          <% for (var key in config.elements['body-xxl'].desktop) { %>
+                            <% if(key !== "padding" && key !== "margin") { %>
+                              <% if(key == "font-size" || key == "line-height") { %>
+                                <td><%= config.elements['body-xxl'].desktop[key] %>/<%= config.elements['body-xxl'].laptop[key] %>/<%= config.elements['body-xxl'].tablet[key] %>/<%= config.elements['body-xxl'].phone[key] %></td>
+                                <% } else { %>
+                                <td><%= config.elements['body-xxl'].desktop[key] %></td>
+                              <% } %>
+                            <% } %>
+                          <% } %>
+                          <td>Sentence</td>
+                        </tr>
+                      <% } %>
+
+                      <tr>
+                        <td class="classes">classes</td>
+                        <td class="classes">Arial</td>
+                        <td class="classes">900</td>
+                        <td class="classes">64px / 48px</td>
+                        <td class="classes">72px / 56px</td>
+                        <td class="classes">0px</td>
+                        <td class="classes">0px</td>
+                        <td class="classes">Sentence</td>
+                      </tr>
+
+                      <% if(config.elements['body-xl'].hasOwnProperty('desktop')) { %>
+                        <tr class="f_1">
+                          <td><span class="body-xl">Body XL</span></td>
+                          <% for (var key in config.elements['body-xl'].desktop) { %>
+                            <% if(key !== "padding" && key !== "margin") { %>
+                              <% if(key == "font-size" || key == "line-height") { %>
+                                <td><%= config.elements['body-xl'].desktop[key] %>/<%= config.elements['body-xl'].laptop[key] %>/<%= config.elements['body-xl'].tablet[key] %>/<%= config.elements['body-xl'].phone[key] %></td>
+                                <% } else { %>
+                                <td><%= config.elements['body-xl'].desktop[key] %></td>
+                              <% } %>
+                            <% } %>
+                          <% } %>
+                          <td>Sentence</td>
+                        </tr>
+                      <% } %>
+
+                      <tr class="f_2">
+                        <td class="classes">classes</td>
+                        <td class="classes">Arial</td>
+                        <td class="classes">900</td>
+                        <td class="classes">64px / 48px</td>
+                        <td class="classes">72px / 56px</td>
+                        <td class="classes">0px</td>
+                        <td class="classes">0px</td>
+                        <td class="classes">Sentence</td>
+                      </tr>
+
+                      <% if(config.elements['body-l'].hasOwnProperty('desktop')) { %>
+                        <tr>
+                          <td><span class="body-l">Body L</span></td>
+                          <% for (var key in config.elements['body-l'].desktop) { %>
+                            <% if(key !== "padding" && key !== "margin") { %>
+                              <% if(key == "font-size" || key == "line-height") { %>
+                                <td><%= config.elements['body-l'].desktop[key] %>/<%= config.elements['body-l'].laptop[key] %>/<%= config.elements['body-l'].tablet[key] %>/<%= config.elements['body-l'].phone[key] %></td>
+                                <% } else { %>
+                                <td><%= config.elements['body-l'].desktop[key] %></td>
+                              <% } %>
+                            <% } %>
+                          <% } %>
+                          <td>Sentence</td>
+                        </tr>
+                      <% } %>
+
+                      <tr>
+                        <td class="classes">classes</td>
+                        <td class="classes">Arial</td>
+                        <td class="classes">900</td>
+                        <td class="classes">64px / 48px</td>
+                        <td class="classes">72px / 56px</td>
+                        <td class="classes">0px</td>
+                        <td class="classes">0px</td>
+                        <td class="classes">Sentence</td>
+                      </tr>
+                      
+                      <% if(config.elements['body-m'].hasOwnProperty('desktop')) { %>
+                        <tr class="f_1">
+                          <td><span class="body-m">Body M</span></td>
+                          <% for (var key in config.elements['body-m'].desktop) { %>
+                            <% if(key !== "padding" && key !== "margin") { %>
+                              <% if(key == "font-size" || key == "line-height") { %>
+                                <td><%= config.elements['body-m'].desktop[key] %>/<%= config.elements['body-m'].laptop[key] %>/<%= config.elements['body-m'].tablet[key] %>/<%= config.elements['body-m'].phone[key] %></td>
+                                <% } else { %>
+                                <td><%= config.elements['body-m'].desktop[key] %></td>
+                              <% } %>
+                            <% } %>
+                          <% } %>
+                          <td>Sentence</td>
+                        </tr>
+                      <% } %>
+
+                      <tr class="f_2">
+                        <td class="classes">classes</td>
+                        <td class="classes">Arial</td>
+                        <td class="classes">900</td>
+                        <td class="classes">64px / 48px</td>
+                        <td class="classes">72px / 56px</td>
+                        <td class="classes">0px</td>
+                        <td class="classes">0px</td>
+                        <td class="classes">Sentence</td>
+                      </tr>
+                                            
+                      <% if(config.elements['body-s'].hasOwnProperty('desktop')) { %>
+                        <tr>
+                          <td><span class="body-s">Body S</span></td>
+                          <% for (var key in config.elements['body-s'].desktop) { %>
+                            <% if(key !== "padding" && key !== "margin") { %>
+                              <% if(key == "font-size" || key == "line-height") { %>
+                                <td><%= config.elements['body-s'].desktop[key] %>/<%= config.elements['body-s'].laptop[key] %>/<%= config.elements['body-s'].tablet[key] %>/<%= config.elements['body-s'].phone[key] %></td>
+                                <% } else { %>
+                                <td><%= config.elements['body-s'].desktop[key] %></td>
+                              <% } %>
+                            <% } %>
+                          <% } %>
+                          <td>Sentence</td>
+                        </tr>
+                      <% } %>
+
+                      <tr>
+                        <td class="classes">classes</td>
+                        <td class="classes">Arial</td>
+                        <td class="classes">900</td>
+                        <td class="classes">64px / 48px</td>
+                        <td class="classes">72px / 56px</td>
+                        <td class="classes">0px</td>
+                        <td class="classes">0px</td>
+                        <td class="classes">Sentence</td>
+                      </tr>
+                                                                  
+                      <% if(config.elements['button'].hasOwnProperty('desktop')) { %>
+                        <tr class="f_1">
+                          <td><span class="button-ds">BUTTON</span></td>
+                          <% for (var key in config.elements['button'].desktop) { %>
+                            <% if(key !== "padding" && key !== "margin") { %>
+                              <% if(key == "font-size" || key == "line-height") { %>
+                                <td><%= config.elements['button'].desktop[key] %>/<%= config.elements['button'].laptop[key] %>/<%= config.elements['button'].tablet[key] %>/<%= config.elements['button'].phone[key] %></td>
+                                <% } else { %>
+                                <td><%= config.elements['button'].desktop[key] %></td>
+                              <% } %>
+                            <% } %>
+                          <% } %>
+                          <td>All caps</td>
+                        </tr>
+                      <% } %>
+
+                      <tr class="f_2">
+                        <td class="classes">classes</td>
+                        <td class="classes">Arial</td>
+                        <td class="classes">900</td>
+                        <td class="classes">64px / 48px</td>
+                        <td class="classes">72px / 56px</td>
+                        <td class="classes">0px</td>
+                        <td class="classes">0px</td>
+                        <td class="classes">All caps</td>
+                      </tr>
+                                                                                        
+                      <% if(config.elements['caption'].hasOwnProperty('desktop')) { %>
+                        <tr>
+                          <td><span class="caption">Caption</span></td>
+                          <% for (var key in config.elements['caption'].desktop) { %>
+                            <% if(key !== "padding" && key !== "margin") { %>
+                              <% if(key == "font-size" || key == "line-height") { %>
+                                <td><%= config.elements['caption'].desktop[key] %>/<%= config.elements['caption'].laptop[key] %>/<%= config.elements['caption'].tablet[key] %>/<%= config.elements['caption'].phone[key] %></td>
+                                <% } else { %>
+                                <td><%= config.elements['caption'].desktop[key] %></td>
+                              <% } %>
+                            <% } %>
+                          <% } %>
+                          <td>Sentence</td>
+                        </tr>
+                      <% } %>
+
+                      <tr>
+                        <td class="classes">classes</td>
+                        <td class="classes">Arial</td>
+                        <td class="classes">900</td>
+                        <td class="classes">64px / 48px</td>
+                        <td class="classes">72px / 56px</td>
+                        <td class="classes">0px</td>
+                        <td class="classes">0px</td>
+                        <td class="classes">Sentence</td>
+                      </tr>
+                                                                                                              
+                      <% if(config.elements['overline'].hasOwnProperty('desktop')) { %>
+                        <tr class="f_1">
+                          <td><span class="overline">OVERLINE</span></td>
+                          <% for (var key in config.elements['overline'].desktop) { %>
+                            <% if(key !== "padding" && key !== "margin") { %>
+                              <% if(key == "font-size" || key == "line-height") { %>
+                                <td><%= config.elements['overline'].desktop[key] %>/<%= config.elements['overline'].laptop[key] %>/<%= config.elements['overline'].tablet[key] %>/<%= config.elements['overline'].phone[key] %></td>
+                                <% } else { %>
+                                <td><%= config.elements['overline'].desktop[key] %></td>
+                              <% } %>
+                            <% } %>
+                          <% } %>
+                          <td>All caps</td>
+                        </tr>
+                      <% } %>
+
+                      <tr class="f_2">
+                        <td class="classes">classes</td>
+                        <td class="classes">Arial</td>
+                        <td class="classes">900</td>
+                        <td class="classes">64px / 48px</td>
+                        <td class="classes">72px / 56px</td>
+                        <td class="classes">0px</td>
+                        <td class="classes">0px</td>
+                        <td class="classes">All caps</td>
+                      </tr>
+                </table>
+            <div class="spacer-64"></div>
+            <div class="spacer-64"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

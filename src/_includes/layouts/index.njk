@@ -1,0 +1,2387 @@
+<!DOCTYPE html>
+<html lang="{{ locale }}" dir="{{ dir }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>{{ title }}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Config -->
+    <link rel="stylesheet" href="../assets/css/config.css">
+    
+    <!-- Menu -->
+    <link rel="stylesheet" href="../assets/css/menu/ie5.css">
+    <link rel="stylesheet" href="../assets/css/menu/ie7.css">
+    <!--[if IE 5]>
+    <link rel="stylesheet" href="../assets/css/menu/ie5fix.css">
+    <![endif]-->
+    <link rel="stylesheet" href="../assets/css/menu/ie8.css">
+    <link rel="stylesheet" href="../assets/css/menu/mobile.css">
+    <link rel="stylesheet" href="../assets/css/menu/flex.css">
+
+    <!-- Blocks -->
+    <link rel="stylesheet" href="../assets/css/blocks/ie5.css">
+    <!--[if IE 5]>
+      <link rel="stylesheet" href="../assets/css/blocks/ie5fix.css">
+    <![endif]-->
+    <link rel="stylesheet" href="../assets/css/blocks/ie7.css">
+    <link rel="stylesheet" href="../assets/css/blocks/media.css">
+    <link rel="stylesheet" href="../assets/css/blocks/flex.css">
+
+    <!-- Breadcrumb -->
+    <link rel="stylesheet" href="../assets/css/breadcrumb/style.css">
+
+    <!-- List links -->
+    <link rel="stylesheet" href="../assets/css/list-links/style.css">
+
+    <!-- Contact form -->
+    <link rel="stylesheet" href="../assets/css/contact-form/style.css">
+
+    <!-- Blocks slide animation -->
+    <link rel="stylesheet" href="../assets/css/animations/blocks-slide/style.css" />
+
+    <!-- Progress bar circle animation -->
+    <link rel="stylesheet" href="../assets/css/animations/progress-bar-circle/style.css" />
+
+    <!-- Progress bar linear animation -->
+    <link rel="stylesheet" href="../assets/css/animations/progress-bar-linear/style.css" />
+
+    <!-- Slider -->
+    <link rel="stylesheet" href="../assets/css/slider/ie5.css">
+    <link rel="stylesheet" href="../assets/css/slider/ie7.css">
+    <link rel="stylesheet" href="../assets/css/slider/flex.css">
+
+    <!--Table-pick -->
+    <link rel="stylesheet" href="../assets/css/table/pick/style.css" />
+    
+    <!--Self-link -->
+    <link rel="stylesheet" href="../assets/css/self-link/style.css" />
+    
+    <!--Picture -->
+    <link rel="stylesheet" href="../assets/css/picture/style.css" />
+
+    <!--Mansonry gallery filter -->
+    <link rel="stylesheet" href="../assets/css/mansonry-gallery-filter/style.css" />
+
+    <!--Buttons -->
+    <link rel="stylesheet" href="../assets/css/buttons/style.css" />
+
+    <!--Spacers -->
+    <link rel="stylesheet" href="../assets/css/spacers/style.css" />
+
+    <script>
+      var html = document.getElementsByTagName('html');
+      if(html.length) {
+        html[0].className += html[0].className ? " js" : "js";
+      }
+
+      window.animation = false;
+      if( document.createElement('div').style.animationName !== undefined ) { 
+          window.animation = true;
+          document.querySelector('html').classList.add('animation-supported')
+      }
+    </script>
+  </head>
+  <body class="page">
+    {% include 'partials/header.njk' %}
+    <div class="main">
+      <div class="container">
+        <main>
+          <div class="main__inner">
+            {{ content | safe }}
+            <div>
+              <h2>Language selector</h2>
+                {% include 'partials/language-selector.njk' %}
+            </div>
+        
+            <h2>Breadcrumb</h2>
+            <div class="breadcrumb">
+              <nav aria-label="Breadcrumb">
+                <ol class="breadcrumb__list clearfix">
+                  <li class="breadcrumb__item">
+                    <a class="breadcrumb__link" href="../../../main.html">
+                      Main
+                    </a>
+                  </li>
+                  <li class="breadcrumb__item">
+                    <a class="breadcrumb__link" href="../../parrent-2.html">
+                      Parrent 2
+                    </a>
+                  </li>
+                  <li class="breadcrumb__item">
+                    <a class="breadcrumb__link" href="../parrent-1.html">
+                      Parrent 1
+                    </a>
+                  </li>
+                  <!-- TODO: Is the href attribute necessary for the last link? -->
+                  <li class="breadcrumb__item">
+                    <a class="breadcrumb__link" href="index.html" aria-current="page">
+                      Current page
+                    </a>
+                  </li>
+                </ol>
+              </nav>
+            </div>
+
+            <h2>Wrap list links</h2>
+            <ul class="list-links clearfix">
+              <li class="list-links__item">
+                <a class="list-links__link" href="#">
+                  Link 1
+                </a>
+              </li>
+              <li class="list-links__item">
+                <a class="list-links__link" href="#">
+                  Link 2
+                </a>
+              </li>
+              <li class="list-links__item">
+                <a class="list-links__link" href="#">
+                  Link 3
+                </a>
+              </li>
+              <li class="list-links__item">
+                <a class="list-links__link" href="#">
+                  Link 4
+                </a>
+              </li>
+              <li class="list-links__item">
+                <a class="list-links__link" href="#">
+                  Link 5
+                </a>
+              </li>
+              <li class="list-links__item">
+                <a class="list-links__link" href="#">
+                  Link 6
+                </a>
+              </li>
+            </ul>
+            
+            <h2>Contact form</h2>
+            <div class="contact-form">
+              <form method="POST" name="user-data" data-netlify-recaptcha="true" data-netlify="true">
+                <div class="contact-form__layout-container">
+                  <div class="contact-form__buffer-container">
+                    <label class="contact-form__label" for="user-name">
+                      Enter your name
+                    </label>
+                  </div>
+                  <div class="contact-form__buffer-container">
+                    <input class="contact-form__field" type="text" name="user-name" id="user-name" placeholder="Sergei Dragunov" required>
+                  </div>
+                </div>
+                <div class="contact-form__layout-container">
+                  <div class="contact-form__buffer-container">
+                    <label class="contact-form__label" for="user-email">
+                      Enter your email
+                  </label>
+                  </div>
+                  <div class="contact-form__buffer-container">
+                    <input class="contact-form__field" type="email" name="user-name" id="user-email" placeholder="example@gmail.com" required>
+                  </div>
+                </div>
+                <div class="contact-form__layout-container">
+                  <div class="contact-form__buffer-container">
+                    <label class="contact-form__label" for="user-phone">
+                        Enter your phone
+                    </label>
+                  </div>
+                  <div class="contact-form__buffer-container">
+                    <input class="contact-form__field" type="tel" name="user-phone" id="user-phone" placeholder="(555) 555 1234" required>
+                  </div>
+                </div>
+                <div class="contact-form__layout-container">
+                  <div class="contact-form__buffer-container">
+                    <label class="contact-form__label" for="user-message">
+                      Enter your message
+                  </label>
+                  </div>
+                  <div class="contact-form__buffer-container">
+                    <textarea class="contact-form__field" name="user-message" id="user-message" placeholder="What you are want to tell us" required></textarea>
+                  </div>
+                </div>
+                <div class="contact-form__buffer-container">
+                    <div class="g-recaptcha" id="recaptcha" data-sitekey="6Lfcs48aAAAAANzQ4HtzkIeHe5mpe6UPBFFpUcne">
+                    </div>
+                    <span><b>There should be google recaptcha</b></span>
+                </div>
+                <div class="contact-form__buffer-container">
+                  <button class="contact-form__submit" type="submit">submit</button>
+                </div>
+              </form>
+            </div>
+
+            <h2>Animations</h2>
+
+            <h3>Blocks-slide animation</h3>
+            <div class="spacer-20"></div>
+            <div class="spacer-10"></div>
+            <div class="spacer-2"></div>
+            <div class="dimensional-container">
+              <div class="demo-block-1">
+                <div class="animation-target block-slide animated--bottom">
+                  <h2>Top</h2>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, atque dolore tempore similique tempora provident culpa earum molestias vero omnis? Rerum, optio consequuntur. Nobis beatae quam suscipit distinctio maiores ducimus?</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, atque dolore tempore similique tempora provident culpa earum molestias vero omnis? Rerum, optio consequuntur. Nobis beatae quam suscipit distinctio maiores ducimus?</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, atque dolore tempore similique tempora provident culpa earum molestias vero omnis? Rerum, optio consequuntur. Nobis beatae quam suscipit distinctio maiores ducimus?</p>
+                </div>
+              </div>
+            </div>
+            <div class="spacer-20"></div>
+            <div class="spacer-10"></div>
+            <div class="spacer-2"></div>
+            <div class="dimensional-container">
+              <div class="demo-block-2">
+                <div class="animation-target block-slide animated--left">
+                  <h2>Right</h2>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, atque dolore tempore similique tempora provident culpa earum molestias vero omnis? Rerum, optio consequuntur. Nobis beatae quam suscipit distinctio maiores ducimus?</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, atque dolore tempore similique tempora provident culpa earum molestias vero omnis? Rerum, optio consequuntur. Nobis beatae quam suscipit distinctio maiores ducimus?</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, atque dolore tempore similique tempora provident culpa earum molestias vero omnis? Rerum, optio consequuntur. Nobis beatae quam suscipit distinctio maiores ducimus?</p>
+                </div>
+              </div>
+            </div>
+            <div class="spacer-20"></div>
+            <div class="spacer-10"></div>
+            <div class="spacer-2"></div>
+            <div class="dimensional-container">
+              <div class="demo-block-3">
+                <div class="animation-target block-slide animated--right">
+                  <h2>Left</h2>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, atque dolore tempore similique tempora provident culpa earum molestias vero omnis? Rerum, optio consequuntur. Nobis beatae quam suscipit distinctio maiores ducimus?</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, atque dolore tempore similique tempora provident culpa earum molestias vero omnis? Rerum, optio consequuntur. Nobis beatae quam suscipit distinctio maiores ducimus?</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, atque dolore tempore similique tempora provident culpa earum molestias vero omnis? Rerum, optio consequuntur. Nobis beatae quam suscipit distinctio maiores ducimus?</p>
+                </div>
+              </div>
+            </div>
+            <div class="spacer-20"></div>
+            <div class="spacer-10"></div>
+            <div class="spacer-2"></div>
+            <div class="dimensional-container">
+              <div class="demo-block-4">
+                <div class="animation-target block-slide animated--top">
+                    <h2>Bottom</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, atque dolore tempore similique tempora provident culpa earum molestias vero omnis? Rerum, optio consequuntur. Nobis beatae quam suscipit distinctio maiores ducimus?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, atque dolore tempore similique tempora provident culpa earum molestias vero omnis? Rerum, optio consequuntur. Nobis beatae quam suscipit distinctio maiores ducimus?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, atque dolore tempore similique tempora provident culpa earum molestias vero omnis? Rerum, optio consequuntur. Nobis beatae quam suscipit distinctio maiores ducimus?</p>
+                </div>
+              </div>
+            </div>
+            <div class="spacer-20"></div>
+            <div class="spacer-10"></div>
+            <div class="spacer-2"></div>
+
+            <h3>Circle progress bar animation</h3>
+            <div class="dimensional-container">
+              <div class="frame-container">
+                <div class="frame">
+                    <div class="animation-target indicator indicator--1">
+                        <span class="indicator__text animating-counter" data-start="69" data-end="92" data-duration="2000" data-delay="2000">
+                            92
+                        </span>
+                        <svg width="120" height="120" class="indicator__svg">
+                            <circle class="indicator__svg-background" cx="60" cy="60" r="60"></circle>
+                            <circle class="indicator__svg-progress" cx="60" cy="60" r="56"></circle>
+                        </svg>
+                    </div>
+                </div>
+                <div class="frame">
+                    <div class="animation-target indicator indicator--2">
+                        <span class="indicator__text animating-counter" data-start="38" data-end="90" data-duration="2000" data-delay="2000">
+                            90
+                        </span>
+                        <svg width="120" height="120" class="indicator__svg">
+                            <circle class="indicator__svg-background" cx="60" cy="60" r="60"></circle>
+                            <circle class="indicator__svg-progress" cx="60" cy="60" r="56"></circle>
+                        </svg>
+                    </div>
+                </div>
+                <div class="frame">
+                    <div class="animation-target indicator indicator--3">
+                        <span class="indicator__text animating-counter" data-start="8" data-end="62" data-duration="2000" data-delay="2000">
+                            62
+                        </span>
+                        <svg width="120" height="120" class="indicator__svg">
+                            <circle class="indicator__svg-background" cx="60" cy="60" r="60"></circle>
+                            <circle class="indicator__svg-progress" cx="60" cy="60" r="56"></circle>
+                        </svg>
+                    </div>
+                </div>
+                <div class="frame">
+                    <div class="animation-target indicator indicator--4">
+                        <span class="indicator__text animating-counter" data-start="16" data-end="71" data-duration="2000" data-delay="2000">
+                            71
+                        </span>
+                        <svg width="120" height="120" class="indicator__svg">
+                            <circle class="indicator__svg-background" cx="60" cy="60" r="60"></circle>
+                            <circle class="indicator__svg-progress" cx="60" cy="60" r="56"></circle>
+                        </svg>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+            <h3>Linear progress bar animation</h3>
+            <div class="progress-bar progress-bar--design animation-target">
+              <label for="ui-design">UI design</label>
+              <meter class="visually-hidden" id="ui-design" min="0" max="100" value="90">at 90/100</meter>
+              <div class="progress-bar__custom">
+                  <p class="progress-bar__value" >
+                      <span class="animating-counter" data-start="0" data-end="90" data-delay="578" data-duration="2000">
+                          90
+                      </span>
+                      %
+                  </p>
+                  <div class="progress-bar__line">
+                      <div class="progress-bar__line-fill"></div>
+                  </div>
+              </div>
+            </div>
+
+            <h2>Toggle table</h2>
+            <div class="table-pick">
+              <div class="table-pick__controls" id="table-pick-controls">
+                <button class="table-pick__show-button" type="button" id="table-pick-button">
+                  Pick the columns
+                </button>
+                <ul class="table-pick__list disabled" id="table-pick-list">
+                  <li>
+                    <input class="table-pick__checkbox" type="checkbox" name="table-pick-checkbox-1" id="table-pick-checkbox-1" checked="checked">
+                    <label for="table-pick-checkbox-1">User-Agent</label>
+                  </li>
+                  <li>
+                    <input class="table-pick__checkbox" type="checkbox" name="table-pick-checkbox-2" id="table-pick-checkbox-2" checked="checked">
+                    <label for="table-pick-checkbox-2">Host</label>
+                  </li>
+                  <li>
+                    <input class="table-pick__checkbox" type="checkbox" name="table-pick-checkbox-3" id="table-pick-checkbox-3" checked="checked">
+                    <label for="table-pick-checkbox-3">Rx[Mb]</label>
+                  </li>
+                  <li>
+                    <input class="table-pick__checkbox" type="checkbox" name="table-pick-checkbox-4" id="table-pick-checkbox-4" checked="checked">
+                    <label for="table-pick-checkbox-4">Tx[Mb]</label>
+                  </li>
+                  <li>
+                    <input class="table-pick__checkbox" type="checkbox" name="table-pick-checkbox-5" id="table-pick-checkbox-5" checked="checked">
+                    <label for="table-pick-checkbox-5">Upload[Mbps]</label>
+                  </li>
+                  <li>
+                    <input class="table-pick__checkbox" type="checkbox" name="table-pick-checkbox-6" id="table-pick-checkbox-6" checked="checked">
+                    <label for="table-pick-checkbox-6">Download[Mbps]</label>
+                  </li>
+                  <li>
+                    <input class="table-pick__checkbox" type="checkbox" name="table-pick-checkbox-7" id="table-pick-checkbox-7" checked="checked">
+                    <label for="table-pick-checkbox-7">Time[min:sec]</label>
+                  </li>
+                </ul>
+              </div>
+              <table class="table-pick__inner" id="table-pick">
+                <thead>
+                  <th class="table-pick__cell">User-Agent</th>
+                  <th class="table-pick__cell">Host</th>
+                  <th class="table-pick__cell">Rx[Mb]</th>
+                  <th class="table-pick__cell">Tx[Mb]</th>
+                  <th class="table-pick__cell">Upload[Mbps]</th>
+                  <th class="table-pick__cell">Download[Mbps]</th>
+                  <th class="table-pick__cell">Time[min:sec]</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th class="table-pick__cell">Google Pixel 4</th>
+                    <th class="table-pick__cell">ip: 198.51.100.80</th>
+                    <th class="table-pick__cell">Rx: 12Mb</th>
+                    <th class="table-pick__cell">Tx: 12Mb</th>
+                    <th class="table-pick__cell">Up: 2Mbps</th>
+                    <th class="table-pick__cell">Dn: 0Mbps</th>
+                    <th class="table-pick__cell">Time: 22min</th>
+                  </tr>
+                  <tr>
+                    <td class="table-pick__cell">curl/7.68.0</td>
+                    <td class="table-pick__cell">www.google.com:443</td>
+                    <td class="table-pick__cell">0.200</td>
+                    <td class="table-pick__cell">0.200</td>
+                    <td class="table-pick__cell">N/A</td>
+                    <td class="table-pick__cell">N/A</td>
+                    <td class="table-pick__cell">00:02</td>
+                  </tr>
+                  <tr>
+                    <td class="table-pick__cell">Mozilla/5.0</td>
+                    <td class="table-pick__cell">www.google.com:443</td>
+                    <td class="table-pick__cell">0.200</td>
+                    <td class="table-pick__cell">0.200</td>
+                    <td class="table-pick__cell">N/A</td>
+                    <td class="table-pick__cell">N/A</td>
+                    <td class="table-pick__cell">00:02</td>
+                  </tr>
+                  <tr>
+                    <td class="table-pick__cell">curl/7.68.0</td>
+                    <td class="table-pick__cell">www.google.com:443</td>
+                    <td class="table-pick__cell">0.200</td>
+                    <td class="table-pick__cell">0.200</td>
+                    <td class="table-pick__cell">N/A</td>
+                    <td class="table-pick__cell">N/A</td>
+                    <td class="table-pick__cell">00:02</td>
+                  </tr>
+                  <tr>
+                    <td class="table-pick__cell">Mozilla/5.0</td>
+                    <td class="table-pick__cell">www.google.com:443</td>
+                    <td class="table-pick__cell">0.200</td>
+                    <td class="table-pick__cell">0.200</td>
+                    <td class="table-pick__cell">N/A</td>
+                    <td class="table-pick__cell">N/A</td>
+                    <td class="table-pick__cell">00:02</td>
+                  </tr>
+                </tbody>
+                <tbody>
+                  <tr>
+                    <th class="table-pick__cell">Google Pixel 4</th>
+                    <th class="table-pick__cell">ip: 198.51.100.80</th>
+                    <th class="table-pick__cell">Rx: 12Mb</th>
+                    <th class="table-pick__cell">Tx: 12Mb</th>
+                    <th class="table-pick__cell">Up: 2Mbps</th>
+                    <th class="table-pick__cell">Dn: 0Mbps</th>
+                    <th class="table-pick__cell">Time: 22min</th>
+                  </tr>
+                  <tr>
+                    <td class="table-pick__cell">curl/7.68.0</td>
+                    <td class="table-pick__cell">www.google.com:443</td>
+                    <td class="table-pick__cell">0.200</td>
+                    <td class="table-pick__cell">0.200</td>
+                    <td class="table-pick__cell">N/A</td>
+                    <td class="table-pick__cell">N/A</td>
+                    <td class="table-pick__cell">00:02</td>
+                  </tr>
+                  <tr>
+                    <td class="table-pick__cell">Mozilla/5.0</td>
+                    <td class="table-pick__cell">www.google.com:443</td>
+                    <td class="table-pick__cell">0.200</td>
+                    <td class="table-pick__cell">0.200</td>
+                    <td class="table-pick__cell">N/A</td>
+                    <td class="table-pick__cell">N/A</td>
+                    <td class="table-pick__cell">00:02</td>
+                  </tr>
+                  <tr>
+                    <td class="table-pick__cell">curl/7.68.0</td>
+                    <td class="table-pick__cell">www.google.com:443</td>
+                    <td class="table-pick__cell">0.200</td>
+                    <td class="table-pick__cell">0.200</td>
+                    <td class="table-pick__cell">N/A</td>
+                    <td class="table-pick__cell">N/A</td>
+                    <td class="table-pick__cell">00:02</td>
+                  </tr>
+                  <tr>
+                    <td class="table-pick__cell">Mozilla/5.0</td>
+                    <td class="table-pick__cell">www.google.com:443</td>
+                    <td class="table-pick__cell">0.200</td>
+                    <td class="table-pick__cell">0.200</td>
+                    <td class="table-pick__cell">N/A</td>
+                    <td class="table-pick__cell">N/A</td>
+                    <td class="table-pick__cell">00:02</td>
+                  </tr>
+                </tbody>
+                <tbody>
+                  <tr>
+                    <th class="table-pick__cell">Google Pixel 4</th>
+                    <th class="table-pick__cell">ip: 198.51.100.80</th>
+                    <th class="table-pick__cell">Rx: 12Mb</th>
+                    <th class="table-pick__cell">Tx: 12Mb</th>
+                    <th class="table-pick__cell">Up: 2Mbps</th>
+                    <th class="table-pick__cell">Dn: 0Mbps</th>
+                    <th class="table-pick__cell">Time: 22min</th>
+                  </tr>
+                  <tr>
+                    <td class="table-pick__cell">curl/7.68.0</td>
+                    <td class="table-pick__cell">www.google.com:443</td>
+                    <td class="table-pick__cell">0.200</td>
+                    <td class="table-pick__cell">0.200</td>
+                    <td class="table-pick__cell">N/A</td>
+                    <td class="table-pick__cell">N/A</td>
+                    <td class="table-pick__cell">00:02</td>
+                  </tr>
+                  <tr>
+                    <td class="table-pick__cell">Mozilla/5.0</td>
+                    <td class="table-pick__cell">www.google.com:443</td>
+                    <td class="table-pick__cell">0.200</td>
+                    <td class="table-pick__cell">0.200</td>
+                    <td class="table-pick__cell">N/A</td>
+                    <td class="table-pick__cell">N/A</td>
+                    <td class="table-pick__cell">00:02</td>
+                  </tr>
+                  <tr>
+                    <td class="table-pick__cell">curl/7.68.0</td>
+                    <td class="table-pick__cell">www.google.com:443</td>
+                    <td class="table-pick__cell">0.200</td>
+                    <td class="table-pick__cell">0.200</td>
+                    <td class="table-pick__cell">N/A</td>
+                    <td class="table-pick__cell">N/A</td>
+                    <td class="table-pick__cell">00:02</td>
+                  </tr>
+                  <tr>
+                    <td class="table-pick__cell">Mozilla/5.0</td>
+                    <td class="table-pick__cell">www.google.com:443</td>
+                    <td class="table-pick__cell">0.200</td>
+                    <td class="table-pick__cell">0.200</td>
+                    <td class="table-pick__cell">N/A</td>
+                    <td class="table-pick__cell">N/A</td>
+                    <td class="table-pick__cell">00:02</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h2>Self-link copy</h2>
+              <h2 class="anchor-title" id="title-1">
+                <span class="anchor-title__text">Title 1</span>
+                <a href="#title-1" aria-hidden="true" class="anchor-title__link" title="The link will be copied to the clipboard" data-link-label="copy" data-link-action="copied">
+                  <svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+                    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+                  </svg>
+                </a>
+              </h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum atque a animi libero qui dicta dolore reprehenderit inventore rem expedita necessitatibus ea labore dolorem, quod consequatur quo similique explicabo id.</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum atque a animi libero qui dicta dolore reprehenderit inventore rem expedita necessitatibus ea labore dolorem, quod consequatur quo similique explicabo id.</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum atque a animi libero qui dicta dolore reprehenderit inventore rem expedita necessitatibus ea labore dolorem, quod consequatur quo similique explicabo id.</p>
+              <h2 class="anchor-title" id="title-2">
+                <span class="anchor-title__text">Title 2</span>
+                <a href="#title-2" aria-hidden="true" class="anchor-title__link" title="The link will be copied to the clipboard" data-link-label="copy" data-link-action="copied">
+                  <svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+                    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+                  </svg>
+                </a>
+              </h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum atque a animi libero qui dicta dolore reprehenderit inventore rem expedita necessitatibus ea labore dolorem, quod consequatur quo similique explicabo id.</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum atque a animi libero qui dicta dolore reprehenderit inventore rem expedita necessitatibus ea labore dolorem, quod consequatur quo similique explicabo id.</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum atque a animi libero qui dicta dolore reprehenderit inventore rem expedita necessitatibus ea labore dolorem, quod consequatur quo similique explicabo id.</p>
+              <h2 class="anchor-title"  id="title-3">
+                <span class="anchor-title__text">Title 3</span>
+                <a href="#title-3" aria-hidden="true" class="anchor-title__link" title="The link will be copied to the clipboard" data-link-label="copy" data-link-action="copied">
+                  <svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+                    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+                  </svg>
+                </a>
+              </h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum atque a animi libero qui dicta dolore reprehenderit inventore rem expedita necessitatibus ea labore dolorem, quod consequatur quo similique explicabo id.</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum atque a animi libero qui dicta dolore reprehenderit inventore rem expedita necessitatibus ea labore dolorem, quod consequatur quo similique explicabo id.</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum atque a animi libero qui dicta dolore reprehenderit inventore rem expedita necessitatibus ea labore dolorem, quod consequatur quo similique explicabo id.</p>
+
+              <h2>Mansonry gallery filter</h2>
+              <div class="gallery">
+                <ul class="gallery__filter blocks-container blocks-container--4 clearfix">
+                    <li class="blocks-container__item">
+                      <a data-for="all" class="gallery__filter-link" href="all.html">
+                        All
+                      </a>
+                    </li>
+                    <li class="blocks-container__item">
+                      <a data-for="photo" class="gallery__filter-link" href="photography.html">
+                        Photography
+                      </a>
+                    </li>
+                    <li class="blocks-container__item">
+                      <a data-for="architecture" class="gallery__filter-link" href="architecture.html">
+                        Architecture
+                      </a>
+                    </li>
+                    <li class="blocks-container__item">
+                      <a data-for="design" class="gallery__filter-link" href="design.html">
+                        Design
+                      </a>
+                    </li>
+                </ul>
+                <div class="gallery__mansorny">
+                  <div data-item="all photo" class="gallery__mansorny-item">
+                    <figure>
+                      <img src="../assets/img/mansonry-gallery-filter/jobs-1.jpg" alt="A windmill" />
+                      <figcaption>1</figcaption>
+                    </figure>
+                  </div>
+                  <div data-item="all design" class="gallery__mansorny-item">
+                    <figure>
+                      <img src="../assets/img/mansonry-gallery-filter/jobs-2.jpg" alt="A windmill" />
+                      <figcaption>2</figcaption>
+                    </figure>
+                  </div>
+                  <div data-item="all architecture" class="gallery__mansorny-item">
+                    <figure>
+                      <img src="../assets/img/mansonry-gallery-filter/jobs-3.jpg" alt="A windmill" />
+                      <figcaption>3</figcaption>
+                    </figure>
+                  </div>
+                  <div data-item="all architecture" class="gallery__mansorny-item">
+                    <figure>
+                      <img src="../assets/img/mansonry-gallery-filter/jobs-4.jpg" alt="A windmill" />
+                      <figcaption>4</figcaption>
+                    </figure>
+                  </div>
+                  <div data-item="all architecture" class="gallery__mansorny-item">
+                    <figure>
+                      <img src="../assets/img/mansonry-gallery-filter/jobs-5.jpg" alt="A windmill" />
+                      <figcaption>5</figcaption>
+                    </figure>
+                  </div>
+                  <div data-item="all architecture" class="gallery__mansorny-item">
+                    <figure>
+                      <img src="../assets/img/mansonry-gallery-filter/jobs-6.jpg" alt="A windmill" />
+                      <figcaption>6</figcaption>
+                    </figure>
+                  </div>
+                  <div data-item="all design" class="gallery__mansorny-item">
+                    <figure>
+                      <img src="../assets/img/mansonry-gallery-filter/jobs-7.jpg" alt="A windmill" />
+                      <figcaption>7</figcaption>
+                    </figure>
+                  </div>
+                  <div data-item="all design" class="gallery__mansorny-item">
+                    <figure>
+                      <img src="../assets/img/mansonry-gallery-filter/jobs-8.jpg" alt="A windmill" />
+                      <figcaption>8</figcaption>
+                    </figure>
+                  </div>
+                  <div data-item="all photo" class="gallery__mansorny-item">
+                    <figure>
+                      <img src="../assets/img/mansonry-gallery-filter/jobs-9.jpg" alt="A windmill" />
+                      <figcaption>9</figcaption>
+                    </figure>
+                  </div>
+                  <div data-item="all photo" class="gallery__mansorny-item">
+                    <figure>
+                      <img src="../assets/img/mansonry-gallery-filter/jobs-10.jpg" alt="A windmill" />
+                      <figcaption>10</figcaption>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+
+              <h2>Buttons</h2>
+              <div class="dimensional-container">
+                <button class="button button-submit" type="submit">
+                    button
+                </button>
+              </div>
+              <div class="dimensional-container">
+                <a class="button button-submit" href="#">
+                    link
+                </a>
+              </div>
+              <div class="dimensional-container">
+                  <a class="button button-google" href="#" aria-label="Log in with google">
+                  </a>
+              </div>
+              <div class="dimensional-container">
+                  <a class="red-link" href="#">
+                    link
+                  </a>
+              </div>
+              <div class="dimensional-container">
+                  <button class="red-link" type="button">
+                    button
+                  </button>
+              </div>
+              <div class="dimensional-container">
+                  <button class="button button-tablet button-tablet--white " type="submit">
+                      button
+                  </button>
+              </div>
+              <div class="dimensional-container">
+                  <a href="#" class="button button-tablet button-tablet--white">
+                      link
+                  </a>
+              </div>
+              <div class="dimensional-container">
+                  <button class="cancel-button cancel-button--light" type="button" aria-label="Close popup">
+                  </button>
+              </div>
+              <div class="dimensional-container" style="background-color: #1e1c3c;">
+                  <button class="cancel-button cancel-button--dark" type="button" aria-label="Close popup">
+                  </button>
+              </div>
+              <div class="dimensional-container">
+                  <button class="button button-grey button-grey--action" type="button">
+                      button
+                  </button>
+              </div>
+              <div class="dimensional-container">
+                  <a class="button button-grey button-grey--action" href="#">
+                      link
+                  </a>
+              </div>
+              <div class="dimensional-container">
+                  <button class="dropdown-button dropdown-button--light" type="button"></button>
+              </div>
+              <div class="dimensional-container" style="background-color: #1e1c3c;">
+                <button class="dropdown-button dropdown-button--dark" type="button"></button>
+              </div>
+              <div class="dimensional-container">
+                  <button class="block-link">
+                      button
+                  </button>
+              </div>
+              <div class="dimensional-container">
+                  <a href="#" class="block-link">
+                      link
+                  </a>
+              </div>
+              <div class="dimensional-container">
+                  <div class="navigation-link">
+                      <a href="#">link</a>
+                  </div>
+              </div>
+              <div class="dimensional-container">
+                  <div class="next-link">
+                      <button type="button">
+                          button
+                      </button>
+                  </div>
+              </div>
+              <div class="dimensional-container">
+                  <div class="next-link">
+                      <a class="next-link" href="#">
+                          link
+                      </a>
+                  </div>
+              </div>
+              <div class="header__toolbar-burger burger">
+                  <button class="burger__button burger__button--light" aria-haspopup="true" aria-expanded="true" aria-label="Close menu">
+                  </button>
+              </div>
+              <div class="header__toolbar-burger burger" style="background-color: #1e1c3c;">
+                  <button class="burger__button burger__button--dark" aria-haspopup="true" aria-expanded="true" aria-label="Close menu">
+                  </button>
+              </div>
+
+              <h2>Google map</h2>
+              <div
+              class="google-map"
+              style="
+                position: relative;
+                width: 100%;
+                padding-bottom: 500px;
+                background-color: #e6e4e0;
+                overflow: hidden;
+              "
+            >
+              <img
+                src="../assets/img/map/map.jpg"
+                width="1440"
+                height="500"
+                alt="Maidan Nezalezhnosti, 1, Kyiv, Kyiv Oblast, 02000"
+                style="
+                  position: absolute;
+                  z-index: 1;
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                "
+              />
+              <p
+                class="google-map__tooltip"
+                style="
+                  position: absolute;
+                  bottom: 0;
+                  left: 50%;
+                  z-index: 2;
+                  color: #4c4b51;
+                  background-color: #ffffff;
+                  transform: translateX(-50%);
+                "
+              >
+                <a href="https://goo.gl/maps/Vx6YsTNJ3wGMaxsy5"
+                  >Maidan Nezalezhnosti, 1, Kyiv, Kyiv Oblast, 02000</a
+                >
+              </p>
+              <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.448049968852!2d30.52305523154402!3d50.45138081087751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce5058d2981d%3A0x7c951a676051b365!2sMaidan%20Nezalezhnosti%2C%201%2C%20Kyiv%2C%20Kyiv%20Oblast%2C%2002000!5e0!3m2!1sen!2sua!4v1623430434969!5m2!1sen!2sua"
+              width="2560" 
+              height="500"
+              style="
+                position: absolute;
+                z-index: 3;
+                display: block;
+                width: 100%;
+                height: 500px;
+                border: 0;" 
+                allowfullscreen="" loading="lazy">
+              </iframe>
+              </div>
+              
+              <h2>Block flow</h2>
+              <h3>2 blocks</h3>
+
+              <h4>Nowrap/Self-height</h4>
+              <div class="blocks-container blocks-container--2 clearfix">
+                <div class="blocks-container__item">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                </div>
+                <div class="blocks-container__item">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                  </p>
+                </div>
+              </div>
+              <div class="blocks-container blocks-container--2 clearfix">
+                <div class="blocks-container__item">
+                  <div class="dimensional-container">
+                    <div class="mock-block">
+                      <div class="dimensional-container">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="blocks-container__item">
+                  <div class="dimensional-container">
+                    <div class="mock-block">
+                      <div class="dimensional-container">
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <h4>Wrap/Self-height</h4>
+              <div class="blocks-container blocks-container--wrap blocks-container--2 clearfix">
+                <div class="blocks-container__item">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                </div>
+                <div class="blocks-container__item">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                  </p>
+                </div>
+              </div>
+              <div class="blocks-container blocks-container--wrap blocks-container--2 clearfix">
+                <div class="blocks-container__item">
+                  <div class="dimensional-container">
+                    <div class="mock-block">
+                      <div class="dimensional-container">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="blocks-container__item">
+                  <div class="dimensional-container">
+                    <div class="mock-block">
+                      <div class="dimensional-container">
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <h4>Nowrap/Equal-height</h4>
+              <div class="blocks-container blocks-container--2 clearfix">
+                <div class="blocks-container__item">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                </div>
+                <div class="blocks-container__item">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                  </p>
+                </div>
+              </div>
+              <div class="blocks-container blocks-container--2 clearfix">
+                <div class="blocks-container__item blocks-container__full-height-parrent">
+                  <div class="dimensional-container blocks-container__full-height-child">
+                    <div class="mock-block blocks-container__full-height-child">
+                      <div class="dimensional-container">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="blocks-container__item blocks-container__full-height-parrent">
+                  <div class="dimensional-container blocks-container__full-height-child">
+                    <div class="mock-block blocks-container__full-height-child">
+                      <div class="dimensional-container">
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <h4>Wrap/Equal-height</h4>
+              <div class="blocks-container blocks-container--wrap blocks-container--2 clearfix">
+                <div class="blocks-container__item">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                </div>
+                <div class="blocks-container__item">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                  </p>
+                </div>
+              </div>
+              <div class="blocks-container blocks-container--wrap blocks-container--2 clearfix">
+                <div class="blocks-container__item blocks-container__full-height-parrent">
+                  <div class="dimensional-container blocks-container__full-height-child">
+                    <div class="mock-block blocks-container__full-height-child">
+                      <div class="dimensional-container">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="blocks-container__item blocks-container__full-height-parrent">
+                  <div class="dimensional-container blocks-container__full-height-child">
+                    <div class="mock-block blocks-container__full-height-child">
+                      <div class="dimensional-container">
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <h3>3 blocks</h3>
+
+              <h4>Nowrap/Self-height</h4>
+              <div class="blocks-container blocks-container--3 clearfix">
+                <div class="blocks-container__item">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                </div>
+                <div class="blocks-container__item">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                  </p>
+                </div>
+                <div class="blocks-container__item">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                </div>
+              </div>
+              <div class="blocks-container blocks-container--3 clearfix">
+                <div class="blocks-container__item">
+                  <div class="dimensional-container">
+                    <div class="mock-block">
+                      <div class="dimensional-container">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="blocks-container__item">
+                  <div class="dimensional-container">
+                    <div class="mock-block">
+                      <div class="dimensional-container">
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="blocks-container__item">
+                  <div class="dimensional-container">
+                    <div class="mock-block">
+                      <div class="dimensional-container">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <h4>Wrap/Self-height</h4>
+              <div class="blocks-container blocks-container--wrap blocks-container--3 clearfix">
+                <div class="blocks-container__item">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                </div>
+                <div class="blocks-container__item">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                  </p>
+                </div>
+                <div class="blocks-container__item">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                </div>
+              </div>
+              <div class="blocks-container blocks-container--wrap blocks-container--3 clearfix">
+                <div class="blocks-container__item">
+                  <div class="dimensional-container">
+                    <div class="mock-block">
+                      <div class="dimensional-container">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="blocks-container__item">
+                  <div class="dimensional-container">
+                    <div class="mock-block">
+                      <div class="dimensional-container">
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="blocks-container__item">
+                  <div class="dimensional-container">
+                    <div class="mock-block">
+                      <div class="dimensional-container">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <h4>Nowrap/Equal-height</h4>
+              <div class="blocks-container blocks-container--3 clearfix">
+                <div class="blocks-container__item">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                </div>
+                <div class="blocks-container__item">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                  </p>
+                </div>
+                <div class="blocks-container__item">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                </div>
+              </div>
+              <div class="blocks-container blocks-container--3 clearfix">
+                <div class="blocks-container__item blocks-container__full-height-parrent">
+                  <div class="dimensional-container blocks-container__full-height-child">
+                    <div class="mock-block blocks-container__full-height-child">
+                      <div class="dimensional-container">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="blocks-container__item blocks-container__full-height-parrent">
+                  <div class="dimensional-container blocks-container__full-height-child">
+                    <div class="mock-block blocks-container__full-height-child">
+                      <div class="dimensional-container">
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="blocks-container__item blocks-container__full-height-parrent">
+                  <div class="dimensional-container blocks-container__full-height-child">
+                    <div class="mock-block blocks-container__full-height-child">
+                      <div class="dimensional-container">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <h4>Wrap/Equal-height</h4>
+              <div class="blocks-container blocks-container--wrap blocks-container--3 clearfix">
+                <div class="blocks-container__item">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                </div>
+                <div class="blocks-container__item">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                  </p>
+                </div>
+                <div class="blocks-container__item">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                </div>
+              </div>
+              <div class="blocks-container blocks-container--wrap blocks-container--3 clearfix">
+                <div class="blocks-container__item blocks-container__full-height-parrent">
+                  <div class="dimensional-container blocks-container__full-height-child">
+                    <div class="mock-block blocks-container__full-height-child">
+                      <div class="dimensional-container">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="blocks-container__item blocks-container__full-height-parrent">
+                  <div class="dimensional-container blocks-container__full-height-child">
+                    <div class="mock-block blocks-container__full-height-child">
+                      <div class="dimensional-container">
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="blocks-container__item blocks-container__full-height-parrent">
+                  <div class="dimensional-container blocks-container__full-height-child">
+                    <div class="mock-block blocks-container__full-height-child">
+                      <div class="dimensional-container">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <h3>4 blocks</h3>
+
+              <h4>Nowrap/Self-height</h4>
+              <div class="blocks-container blocks-container--4 clearfix">
+                <div class="blocks-container__item">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                </div>
+                <div class="blocks-container__item">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                  </p>
+                </div>
+                <div class="blocks-container__item">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                </div>
+                <div class="blocks-container__item">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                  </p>
+                </div>
+              </div>
+              <div class="blocks-container blocks-container--4 clearfix">
+                <div class="blocks-container__item">
+                  <div class="dimensional-container">
+                    <div class="mock-block">
+                      <div class="dimensional-container">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="blocks-container__item">
+                  <div class="dimensional-container">
+                    <div class="mock-block">
+                      <div class="dimensional-container">
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="blocks-container__item">
+                  <div class="dimensional-container">
+                    <div class="mock-block">
+                      <div class="dimensional-container">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="blocks-container__item">
+                  <div class="dimensional-container">
+                    <div class="mock-block">
+                      <div class="dimensional-container">
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <h4>Wrap/Self-height</h4>
+              <div class="blocks-container blocks-container--wrap blocks-container--4 clearfix">
+                <div class="blocks-container__item">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                </div>
+                <div class="blocks-container__item">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                  </p>
+                </div>
+                <div class="blocks-container__item">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                </div>
+                <div class="blocks-container__item">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                  </p>
+                </div>
+              </div>
+              <div class="blocks-container blocks-container--wrap blocks-container--4 clearfix">
+                <div class="blocks-container__item">
+                  <div class="dimensional-container">
+                    <div class="mock-block">
+                      <div class="dimensional-container">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="blocks-container__item">
+                  <div class="dimensional-container">
+                    <div class="mock-block">
+                      <div class="dimensional-container">
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="blocks-container__item">
+                  <div class="dimensional-container">
+                    <div class="mock-block">
+                      <div class="dimensional-container">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="blocks-container__item">
+                  <div class="dimensional-container">
+                    <div class="mock-block">
+                      <div class="dimensional-container">
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <h4>Nowrap/Equal-height</h4>
+              <div class="blocks-container blocks-container--4 clearfix">
+                <div class="blocks-container__item">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                </div>
+                <div class="blocks-container__item">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                  </p>
+                </div>
+                <div class="blocks-container__item">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                </div>
+                <div class="blocks-container__item">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                  </p>
+                </div>
+              </div>
+              <div class="blocks-container blocks-container--4 clearfix">
+                <div class="blocks-container__item blocks-container__full-height-parrent">
+                  <div class="dimensional-container blocks-container__full-height-child">
+                    <div class="mock-block blocks-container__full-height-child">
+                      <div class="dimensional-container">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="blocks-container__item blocks-container__full-height-parrent">
+                  <div class="dimensional-container blocks-container__full-height-child">
+                    <div class="mock-block blocks-container__full-height-child">
+                      <div class="dimensional-container">
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="blocks-container__item blocks-container__full-height-parrent">
+                  <div class="dimensional-container blocks-container__full-height-child">
+                    <div class="mock-block blocks-container__full-height-child">
+                      <div class="dimensional-container">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="blocks-container__item blocks-container__full-height-parrent">
+                  <div class="dimensional-container blocks-container__full-height-child">
+                    <div class="mock-block blocks-container__full-height-child">
+                      <div class="dimensional-container">
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <h4>Wrap/Equal-height</h4>
+              <div class="blocks-container blocks-container--wrap blocks-container--4 clearfix">
+                <div class="blocks-container__item">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                </div>
+                <div class="blocks-container__item">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                  </p>
+                </div>
+                <div class="blocks-container__item">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                </div>
+                <div class="blocks-container__item">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                  </p>
+                </div>
+              </div>
+              <div class="blocks-container blocks-container--wrap blocks-container--4 clearfix">
+                <div class="blocks-container__item blocks-container__full-height-parrent">
+                  <div class="dimensional-container blocks-container__full-height-child">
+                    <div class="mock-block blocks-container__full-height-child">
+                      <div class="dimensional-container">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="blocks-container__item blocks-container__full-height-parrent">
+                  <div class="dimensional-container blocks-container__full-height-child">
+                    <div class="mock-block blocks-container__full-height-child">
+                      <div class="dimensional-container">
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="blocks-container__item blocks-container__full-height-parrent">
+                  <div class="dimensional-container blocks-container__full-height-child">
+                    <div class="mock-block blocks-container__full-height-child">
+                      <div class="dimensional-container">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="blocks-container__item blocks-container__full-height-parrent">
+                  <div class="dimensional-container blocks-container__full-height-child">
+                    <div class="mock-block blocks-container__full-height-child">
+                      <div class="dimensional-container">
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <h3>5 blocks</h3>
+
+              <h4>Nowrap/Self-height</h4>
+              <div class="blocks-container blocks-container--5 clearfix">
+                <div class="blocks-container__item">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                </div>
+                <div class="blocks-container__item">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                  </p>
+                </div>
+                <div class="blocks-container__item">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                </div>
+                <div class="blocks-container__item">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                </div>
+                <div class="blocks-container__item">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                  </p>
+                </div>
+              </div>
+              <div class="blocks-container blocks-container--5 clearfix">
+                <div class="blocks-container__item">
+                  <div class="dimensional-container">
+                    <div class="mock-block">
+                      <div class="dimensional-container">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="blocks-container__item">
+                  <div class="dimensional-container">
+                    <div class="mock-block">
+                      <div class="dimensional-container">
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="blocks-container__item">
+                  <div class="dimensional-container">
+                    <div class="mock-block">
+                      <div class="dimensional-container">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="blocks-container__item">
+                  <div class="dimensional-container">
+                    <div class="mock-block">
+                      <div class="dimensional-container">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="blocks-container__item">
+                  <div class="dimensional-container">
+                    <div class="mock-block">
+                      <div class="dimensional-container">
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <h4>Wrap/Self-height</h4>
+              <div class="blocks-container blocks-container--wrap blocks-container--5 clearfix">
+                <div class="blocks-container__item">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                </div>
+                <div class="blocks-container__item">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                  </p>
+                </div>
+                <div class="blocks-container__item">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                </div>
+                <div class="blocks-container__item">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                </div>
+                <div class="blocks-container__item">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                  </p>
+                </div>
+              </div>
+              <div class="blocks-container blocks-container--wrap blocks-container--5 clearfix">
+                <div class="blocks-container__item">
+                  <div class="dimensional-container">
+                    <div class="mock-block">
+                      <div class="dimensional-container">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="blocks-container__item">
+                  <div class="dimensional-container">
+                    <div class="mock-block">
+                      <div class="dimensional-container">
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="blocks-container__item">
+                  <div class="dimensional-container">
+                    <div class="mock-block">
+                      <div class="dimensional-container">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="blocks-container__item">
+                  <div class="dimensional-container">
+                    <div class="mock-block">
+                      <div class="dimensional-container">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="blocks-container__item">
+                  <div class="dimensional-container">
+                    <div class="mock-block">
+                      <div class="dimensional-container">
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <h4>Nowrap/Equal-height</h4>
+              <div class="blocks-container blocks-container--5 clearfix">
+                <div class="blocks-container__item">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                </div>
+                <div class="blocks-container__item">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                  </p>
+                </div>
+                <div class="blocks-container__item">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                </div>
+                <div class="blocks-container__item">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                </div>
+                <div class="blocks-container__item">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                  </p>
+                </div>
+              </div>
+              <div class="blocks-container blocks-container--5 clearfix">
+                <div class="blocks-container__item blocks-container__full-height-parrent">
+                  <div class="dimensional-container blocks-container__full-height-child">
+                    <div class="mock-block blocks-container__full-height-child">
+                      <div class="dimensional-container">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="blocks-container__item blocks-container__full-height-parrent">
+                  <div class="dimensional-container blocks-container__full-height-child">
+                    <div class="mock-block blocks-container__full-height-child">
+                      <div class="dimensional-container">
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="blocks-container__item blocks-container__full-height-parrent">
+                  <div class="dimensional-container blocks-container__full-height-child">
+                    <div class="mock-block blocks-container__full-height-child">
+                      <div class="dimensional-container">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="blocks-container__item blocks-container__full-height-parrent">
+                  <div class="dimensional-container blocks-container__full-height-child">
+                    <div class="mock-block blocks-container__full-height-child">
+                      <div class="dimensional-container">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="blocks-container__item blocks-container__full-height-parrent">
+                  <div class="dimensional-container blocks-container__full-height-child">
+                    <div class="mock-block blocks-container__full-height-child">
+                      <div class="dimensional-container">
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <h4>Wrap/Equal-height</h4>
+              <div class="blocks-container blocks-container--wrap blocks-container--5 clearfix">
+                <div class="blocks-container__item">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                </div>
+                <div class="blocks-container__item">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                  </p>
+                </div>
+                <div class="blocks-container__item">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                </div>
+                <div class="blocks-container__item">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                </div>
+                <div class="blocks-container__item">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                  </p>
+                </div>
+              </div>
+              <div class="blocks-container blocks-container--wrap blocks-container--5 clearfix">
+                <div class="blocks-container__item blocks-container__full-height-parrent">
+                  <div class="dimensional-container blocks-container__full-height-child">
+                    <div class="mock-block blocks-container__full-height-child">
+                      <div class="dimensional-container">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="blocks-container__item blocks-container__full-height-parrent">
+                  <div class="dimensional-container blocks-container__full-height-child">
+                    <div class="mock-block blocks-container__full-height-child">
+                      <div class="dimensional-container">
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="blocks-container__item blocks-container__full-height-parrent">
+                  <div class="dimensional-container blocks-container__full-height-child">
+                    <div class="mock-block blocks-container__full-height-child">
+                      <div class="dimensional-container">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="blocks-container__item blocks-container__full-height-parrent">
+                  <div class="dimensional-container blocks-container__full-height-child">
+                    <div class="mock-block blocks-container__full-height-child">
+                      <div class="dimensional-container">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="blocks-container__item blocks-container__full-height-parrent">
+                  <div class="dimensional-container blocks-container__full-height-child">
+                    <div class="mock-block blocks-container__full-height-child">
+                      <div class="dimensional-container">
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <h3>6 blocks</h3>
+
+              <h4>Nowrap/Self-height</h4>
+              <div class="blocks-container blocks-container--6 clearfix">
+                <div class="blocks-container__item">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                </div>
+                <div class="blocks-container__item">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                  </p>
+                </div>
+                <div class="blocks-container__item">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                </div>
+                <div class="blocks-container__item">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                </div>
+                <div class="blocks-container__item">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                  </p>
+                </div>
+                <div class="blocks-container__item">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                </div>
+              </div>
+              <div class="blocks-container blocks-container--6 clearfix">
+                <div class="blocks-container__item">
+                  <div class="dimensional-container">
+                    <div class="mock-block">
+                      <div class="dimensional-container">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="blocks-container__item">
+                  <div class="dimensional-container">
+                    <div class="mock-block">
+                      <div class="dimensional-container">
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="blocks-container__item">
+                  <div class="dimensional-container">
+                    <div class="mock-block">
+                      <div class="dimensional-container">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="blocks-container__item">
+                  <div class="dimensional-container">
+                    <div class="mock-block">
+                      <div class="dimensional-container">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="blocks-container__item">
+                  <div class="dimensional-container">
+                    <div class="mock-block">
+                      <div class="dimensional-container">
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="blocks-container__item">
+                  <div class="dimensional-container">
+                    <div class="mock-block">
+                      <div class="dimensional-container">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <h4>Wrap/Self-height</h4>
+              <div class="blocks-container blocks-container--wrap blocks-container--6 clearfix">
+                <div class="blocks-container__item">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                </div>
+                <div class="blocks-container__item">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                  </p>
+                </div>
+                <div class="blocks-container__item">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                </div>
+                <div class="blocks-container__item">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                </div>
+                <div class="blocks-container__item">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                  </p>
+                </div>
+                <div class="blocks-container__item">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                </div>
+              </div>
+              <div class="blocks-container blocks-container--wrap blocks-container--6 clearfix">
+                <div class="blocks-container__item">
+                  <div class="dimensional-container">
+                    <div class="mock-block">
+                      <div class="dimensional-container">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="blocks-container__item">
+                  <div class="dimensional-container">
+                    <div class="mock-block">
+                      <div class="dimensional-container">
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="blocks-container__item">
+                  <div class="dimensional-container">
+                    <div class="mock-block">
+                      <div class="dimensional-container">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="blocks-container__item">
+                  <div class="dimensional-container">
+                    <div class="mock-block">
+                      <div class="dimensional-container">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="blocks-container__item">
+                  <div class="dimensional-container">
+                    <div class="mock-block">
+                      <div class="dimensional-container">
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="blocks-container__item">
+                  <div class="dimensional-container">
+                    <div class="mock-block">
+                      <div class="dimensional-container">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <h4>Nowrap/Equal-height</h4>
+              <div class="blocks-container blocks-container--6 clearfix">
+                <div class="blocks-container__item">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                </div>
+                <div class="blocks-container__item">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                  </p>
+                </div>
+                <div class="blocks-container__item">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                </div>
+                <div class="blocks-container__item">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                </div>
+                <div class="blocks-container__item">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                  </p>
+                </div>
+                <div class="blocks-container__item">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                </div>
+              </div>
+              <div class="blocks-container blocks-container--6 clearfix">
+                <div class="blocks-container__item blocks-container__full-height-parrent">
+                  <div class="dimensional-container blocks-container__full-height-child">
+                    <div class="mock-block blocks-container__full-height-child">
+                      <div class="dimensional-container">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="blocks-container__item blocks-container__full-height-parrent">
+                  <div class="dimensional-container blocks-container__full-height-child">
+                    <div class="mock-block blocks-container__full-height-child">
+                      <div class="dimensional-container">
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="blocks-container__item blocks-container__full-height-parrent">
+                  <div class="dimensional-container blocks-container__full-height-child">
+                    <div class="mock-block blocks-container__full-height-child">
+                      <div class="dimensional-container">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="blocks-container__item blocks-container__full-height-parrent">
+                  <div class="dimensional-container blocks-container__full-height-child">
+                    <div class="mock-block blocks-container__full-height-child">
+                      <div class="dimensional-container">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="blocks-container__item blocks-container__full-height-parrent">
+                  <div class="dimensional-container blocks-container__full-height-child">
+                    <div class="mock-block blocks-container__full-height-child">
+                      <div class="dimensional-container">
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="blocks-container__item blocks-container__full-height-parrent">
+                  <div class="dimensional-container blocks-container__full-height-child">
+                    <div class="mock-block blocks-container__full-height-child">
+                      <div class="dimensional-container">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <h4>Wrap/Equal-height</h4>
+              <div class="blocks-container blocks-container--wrap blocks-container--6 clearfix">
+                <div class="blocks-container__item">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                </div>
+                <div class="blocks-container__item">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                  </p>
+                </div>
+                <div class="blocks-container__item">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                </div>
+                <div class="blocks-container__item">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                </div>
+                <div class="blocks-container__item">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                  </p>
+                </div>
+                <div class="blocks-container__item">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                </div>
+              </div>
+              <div class="blocks-container blocks-container--wrap blocks-container--6 clearfix">
+                <div class="blocks-container__item blocks-container__full-height-parrent">
+                  <div class="dimensional-container blocks-container__full-height-child">
+                    <div class="mock-block blocks-container__full-height-child">
+                      <div class="dimensional-container">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="blocks-container__item blocks-container__full-height-parrent">
+                  <div class="dimensional-container blocks-container__full-height-child">
+                    <div class="mock-block blocks-container__full-height-child">
+                      <div class="dimensional-container">
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="blocks-container__item blocks-container__full-height-parrent">
+                  <div class="dimensional-container blocks-container__full-height-child">
+                    <div class="mock-block blocks-container__full-height-child">
+                      <div class="dimensional-container">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="blocks-container__item blocks-container__full-height-parrent">
+                  <div class="dimensional-container blocks-container__full-height-child">
+                    <div class="mock-block blocks-container__full-height-child">
+                      <div class="dimensional-container">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="blocks-container__item blocks-container__full-height-parrent">
+                  <div class="dimensional-container blocks-container__full-height-child">
+                    <div class="mock-block blocks-container__full-height-child">
+                      <div class="dimensional-container">
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="blocks-container__item blocks-container__full-height-parrent">
+                  <div class="dimensional-container blocks-container__full-height-child">
+                    <div class="mock-block blocks-container__full-height-child">
+                      <div class="dimensional-container">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <h2>Custom blocks</h2>
+
+              <h3>3 --> 2/1</h3>
+              
+              <h4>Wrap/Self-height</h4>
+              <div class="blocks-container blocks-container--wrap blocks-container--3 clearfix">
+                <div class="blocks-container__item blocks-container__item--half-width">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                </div>
+                <div class="blocks-container__item blocks-container__item--half-width">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                  </p>
+                </div>
+                <div class="blocks-container__item">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                </div>
+              </div>
+              <div class="blocks-container blocks-container--wrap blocks-container--3 clearfix">
+                <div class="blocks-container__item blocks-container__item--half-width">
+                  <div class="dimensional-container">
+                    <div class="mock-block">
+                      <div class="dimensional-container">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="blocks-container__item blocks-container__item--half-width">
+                  <div class="dimensional-container">
+                    <div class="mock-block">
+                      <div class="dimensional-container">
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="blocks-container__item">
+                  <div class="dimensional-container">
+                    <div class="mock-block">
+                      <div class="dimensional-container">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <h4>Wrap/Equal-height</h4>
+              <div class="blocks-container blocks-container--wrap blocks-container--3 clearfix">
+                <div class="blocks-container__item blocks-container__item--half-width">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                </div>
+                <div class="blocks-container__item blocks-container__item--half-width">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                  </p>
+                </div>
+                <div class="blocks-container__item">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                </div>
+              </div>
+              <div class="blocks-container blocks-container--wrap blocks-container--3 clearfix">
+                <div class="blocks-container__item blocks-container__full-height-parrent blocks-container__item--half-width">
+                  <div class="dimensional-container blocks-container__full-height-child">
+                    <div class="mock-block blocks-container__full-height-child">
+                      <div class="dimensional-container">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="blocks-container__item blocks-container__full-height-parrent blocks-container__item--half-width">
+                  <div class="dimensional-container blocks-container__full-height-child">
+                    <div class="mock-block blocks-container__full-height-child">
+                      <div class="dimensional-container">
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="blocks-container__item blocks-container__full-height-parrent">
+                  <div class="dimensional-container blocks-container__full-height-child">
+                    <div class="mock-block blocks-container__full-height-child">
+                      <div class="dimensional-container">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <h2>Slider</h2>
+              <div class="carousel-container">
+                <div id="carousel" class="carousel">
+                  <section aria-roledescription="carousel" aria-label="softevol carousel">
+                    <div id="carousel-controls" class="carousel__controls clearfix">
+                    </div>
+                    <div id="carousel-items" class="carousel__items clearfix" aria-live="polite">
+                      <div class="carousel__item" role="group" aria-roledescription="slide" aria-label="1 of 4">
+                          <div class="carousel__item-buffer">
+                              <div class="carousel__item-inner">
+                                  <div class="carousel__image">
+                                      <a href="#">
+                                          <img src="../assets/img/slider/image-1.jpg" alt="Alt text for first image" width="960" height="540">
+                                      </a>
+                                  </div>
+                                  <div class="carousel__caption">
+                                      <h3 class="carousel__caption-heading">
+                                          <a href="#" id="carousel-label-1">
+                                              This is a first slide
+                                          </a>
+                                      </h3>
+                                      <div class="carousel__caption-text">
+                                          <p>
+                                              <span class="contrast">
+                                                  Label for first slide
+                                              </span>
+                                          </p>
+                                      </div>
+                                  </div>
+                                  <hr class="carousel__divider">
+                              </div>
+                          </div>
+                      </div>
+                      <div class="carousel__item" role="group" aria-roledescription="slide" aria-label="2 of 4">
+                          <div class="carousel__item-buffer">
+                              <div class="carousel__item-inner">
+                                  <div class="carousel__image">
+                                      <a href="#">
+                                          <img src="../assets/img/slider/image-2.jpg" alt="Alt text for second image" width="960" height="720">
+                                      </a>
+                                  </div>
+                                  <div class="carousel__caption">
+                                      <h3 class="carousel__caption-heading">
+                                          <a href="#" id="carousel-label-2">
+                                              This is a second slide
+                                          </a>
+                                      </h3>
+                                      <div class="carousel__caption-text">
+                                          <p>
+                                              <span class="contrast">
+                                                  Label for second slide
+                                              </span>
+                                          </p>
+                                      </div>
+                                  </div>
+                                  <hr class="carousel__divider">
+                              </div>
+                          </div>
+                      </div>
+                      <div class="carousel__item" role="group" aria-roledescription="slide" aria-label="3 of 4">
+                          <div class="carousel__item-buffer">
+                              <div class="carousel__item-inner">
+                                  <div class="carousel__image">
+                                      <a href="#">
+                                          <img src="../assets/img/slider/image-3.jpg" alt="Alt text for third image" width="1200" height="675">
+                                      </a>
+                                  </div>
+                                  <div class="carousel__caption">
+                                      <h3 class="carousel__caption-heading">
+                                          <a href="#" id="carousel-label-3">
+                                              This is a third slide
+                                          </a>
+                                      </h3>
+                                      <div class="carousel__caption-text">
+                                          <p>
+                                              <span class="contrast">
+                                                  Label for third slide
+                                              </span>
+                                          </p>
+                                      </div>
+                                  </div>
+                                  <hr class="carousel__divider">
+                              </div>
+                          </div>
+                      </div>
+                      <div class="carousel__item" role="group" aria-roledescription="slide" aria-label="4 of 4">
+                          <div class="carousel__item-buffer">
+                              <div class="carousel__item-inner">
+                                  <div class="carousel__image">
+                                      <a href="#">
+                                          <img src="../assets/img/slider/image-4.jpg" alt="Alt text for fourth image" width="640" height="960">
+                                      </a>
+                                  </div>
+                                  <div class="carousel__caption">
+                                      <h3 class="carousel__caption-heading">
+                                          <a href="#" id="carousel-label-4">
+                                              This is a fourth slide
+                                          </a>
+                                      </h3>
+                                      <div class="carousel__caption-text">
+                                          <p>
+                                              <span class="contrast">
+                                                  Label for fourth slide
+                                              </span>
+                                          </p>
+                                      </div>
+                                  </div>
+                                  <hr class="carousel__divider">
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+              
+              <h2>Spacers</h2>
+              <h3>Spacer 1px</h3>
+              <div class="spacer-1"></div>
+              <hr>
+              <h3>Spacer 2px</h3>
+              <div class="spacer-2"></div>
+              <hr>
+              <h3>Spacer 5px</h3>
+              <div class="spacer-5"></div>
+              <hr>
+              <h3>Spacer 10px</h3>
+              <div class="spacer-10"></div>
+              <hr>
+              <h3>Spacer 20px</h3>
+              <div class="spacer-20"></div>
+              <hr>
+              <h3>Spacer 50px</h3>
+              <div class="spacer-50"></div>
+              <hr>
+              <h3>Spacer 100px</h3>
+              <div class="spacer-100"></div>
+              <hr>
+              <h3>Spacer 200px</h3>
+              <div class="spacer-200"></div>
+              <hr>
+              <h3>Spacer 500px</h3>
+              <div class="spacer-500"></div>
+              <hr>
+
+              {# <h2>Picture</h2>
+              <div class="dimensional-container">
+                {% await imageFull "assets/img/picture-11ty/image.jpg", "alt", "(min-width: 1440px) 1408px, calc(100vw - 32px)" %}
+              </div>
+              <div class="blocks-container blocks-container--wrap blocks-container--2 clearfix">
+                <div class="blocks-container__item">
+                  <div class="dimensional-container">
+                    {% await imageHalf "assets/img/picture-11ty/image.jpg", "alt", "(min-width: 600px) calc(50vw - 32px), (min-width: 1440px) 1408px, calc(100vw - 32px)" %}
+                  </div>
+                </div>
+                <div class="blocks-container__item">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem, perspiciatis quas libero labore, hic enim exercitationem porro in ipsum magni ipsam voluptates veniam quae placeat autem quo beatae iste!
+                  </p>
+                </div>
+              </div> #}
+
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <script src="../assets/js/menu/class-function.js"></script>
+    <script src="../assets/js/menu/window-width.js"></script>
+    <script src="../assets/js/menu/is-media-queries-supported.js"></script>
+    <script src="../assets/js/menu/support-css.js"></script>
+    <script src="../assets/js/menu/keycodes.js"></script> 
+    <script src="../assets/js/menu/mobile.js"></script>
+    <script src="../assets/js/menu/anchor-links.js"></script>
+    <script src="../assets/js/menu/close-dropdown-main-menu.js"></script>
+    <script src="../assets/js/menu/empty-space-click.js"></script>
+    <script src="../assets/js/menu/keyboard-support.js"></script>
+
+
+    <!-- Slider -->
+    <!-- Slider also uses the class-function.js file - I didn't add it again, because it is already on the menu. -->
+    <script src="../assets/js/slider/slider.js"></script>
+
+    <!-- Animation -->
+    <script src="../assets/js/animation/animation.js"></script>
+
+    <!-- Table-pick -->
+    <!-- Table also uses the class-function.js file - I didn't add it again, because it is already on the menu. -->
+    <script src="../assets/js/tables/pick/pick-columns.js"></script>
+
+    <!-- Self link -->
+    <script src="../assets/js/mansonry-gallery-filter/filter.js"></script>
+
+    <!-- Self link -->
+    <script src="../assets/js/self-link/script.js"></script>
+  </body>
+</html>

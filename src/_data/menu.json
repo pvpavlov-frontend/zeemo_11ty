@@ -1,0 +1,7 @@
+{
+    "home": "/",
+    "typography": "design-system/typography/index.html",
+    "ui_kit": "design-system/ui-kit/index.html",
+    "picture": "picture/index.html",
+    "color_system": "design-system/color-system/index.html"
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Color system</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/css/config.css" />
+
+    <!-- Blocks -->
+  <link rel="stylesheet" href="../../../assets/css/blocks/ie5.css">
+  <!--[if IE 5]>
+    <link rel="stylesheet" href="../../../assets/css/blocks/ie5fix.css">
+  <![endif]-->
+  <link rel="stylesheet" href="../../../assets/css/blocks/ie7.css">
+  <link rel="stylesheet" href="../../../assets/css/blocks/media.css">
+  <link rel="stylesheet" href="../../../assets/css/blocks/flex.css">
+
+  <link rel="stylesheet" href="../../../assets/css/design-system/color-system.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="container">
+        <main>
+          <div class="main__inner">
+            <h1>Color system</h1>
+
+            <h2>Theme</h2>
+            <div class="dimensional-container">
+              <div class="blocks-container blocks-container--wrap blocks-container--4 clearfix">
+                <% for (var theme in colors.Theme) { %>
+                  <div class="blocks-container__item">
+                    <div class="color-block">
+                      <div class="color-block__inner" style="background-color: <%= colors.Theme[theme].color %>; color: <%= colors.Theme[theme].label %>;">
+                        <span class="color-block__name"><%= theme %></span>
+                        <span class="color-block__hex"><%= colors.Theme[theme].color %></span>
+                      </div>
+                    </div>
+                  </div>
+                <% } %>
+              </div>
+            </div>
+            
+            <h2>Greys</h2>
+            <div class="dimensional-container">
+              <div class="blocks-container blocks-container--wrap blocks-container--4 clearfix">
+                <% for (var grey in colors.Greys) { %>
+                  <div class="blocks-container__item">
+                    <div class="color-block">
+                      <div class="color-block__inner" style="background-color: <%= colors.Greys[grey].color %>; color: <%= colors.Greys[grey].label %>;">
+                        <span class="color-block__name"><%= grey %></span>
+                        <span class="color-block__hex"><%= colors.Greys[grey].color %></span>
+                      </div>
+                    </div>
+                  </div>
+                <% } %>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

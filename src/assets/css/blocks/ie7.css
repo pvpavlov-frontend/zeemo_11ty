@@ -1,0 +1,3 @@
+.container {
+    max-width: 1264px; /* 1280px - 8*2 = 1264. This needs to be calculated, because box-sizing doesn't work in IE7 and earlier. */
+}

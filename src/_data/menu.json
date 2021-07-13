@@ -1,7 +1,8 @@
 {
     "home": "/",
-    "typography": "design-system/typography/index.html",
-    "ui_kit": "design-system/ui-kit/index.html",
-    "picture": "picture/index.html",
-    "color_system": "design-system/color-system/index.html"
+    "about": "./about.html",
+    "services": "./services.html",
+    "portfolio": "./portfolio.html",
+    "clients": "./clients.html",
+    "contact": "./contact.html"
 }

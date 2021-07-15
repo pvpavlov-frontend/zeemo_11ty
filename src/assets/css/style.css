@@ -472,7 +472,7 @@ input::-webkit-input-placeholder {
   text-align: center;
 }
 
-.page--secondary .breadcrumb__list {
+.breadcrumb__list {
   justify-content: center;
 }
 

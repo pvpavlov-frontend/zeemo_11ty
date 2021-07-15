@@ -1,11 +1,39 @@
 module.exports = {
   hello: {
-    'en': 'Hello',
-    'de': 'Hallo'
+    'en': 'For startups, small businesses and corporations.',
+    'de': 'Für Startups, kleine Unternehmen und Konzerne.'
   },
   select_language: {
     'en': 'Select language',
     'de': 'Sprache auswählen'
+  },
+  title: {
+    'en': 'We make apps!',
+    'de': 'Wir machen Apps!'
+  },
+  title_1: {
+    'en': 'About Us',
+    'de': 'Über uns'
+  },
+  title_2: {
+    'en': 'Our services',
+    'de': 'Unsere Dienstleistungen'
+  },
+  title_3: {
+    'en': 'Portfolio',
+    'de': 'Portefeuille'
+  },
+  title_4: {
+    'en': 'Our Clients',
+    'de': 'Unsere Kunden'
+  },
+  title_5: {
+    'en': 'Contact Us',
+    'de': 'Kontaktiere uns'
+  },
+  btn_hiro: {
+    'en': 'Explore Us',
+    'de': 'Erkunden Sie uns'
   },
   home: {
     'en': 'Home',
@@ -21,7 +49,7 @@ module.exports = {
   },
   portfolio: {
     'en': 'Portfolio',
-    'de': 'Portfolio'
+    'de': 'Portefeuille'
   },
   clients: {
     'en': 'Clients',

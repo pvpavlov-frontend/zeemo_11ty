@@ -1,9 +1,9 @@
 module.exports = [{
-    label: 'English',
+    label: 'En',
     code: 'en'
   },
   {
-    label: 'Deutsche',
+    label: 'De',
     code: 'de'
   }
 ];

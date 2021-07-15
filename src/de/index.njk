@@ -1,5 +1,5 @@
 ---
-  h1: Wir machen Apps!
+  title: Wir machen Apps!
   layout: layouts/index.njk
 ---
 
@@ -8,12 +8,12 @@
   <section>
     <div class="hero__inner">
       <div class="hero__content">
-        <h1 class="text-white">{{ h1 }}</h1>
+        <h1 class="text-white">{{ 'title' | i18n}}</h1>
         <p class="hero__lead text-white">
            {{ 'hello' | i18n}}
         </p>
         <div class="spacer-20"></div>
-        <a class="button button--center upper primary-button" href="#about-us">Explore Us</a>
+        <a class="button button--center upper primary-button" href="#about-us">{{ 'btn_hiro' | i18n}}</a>
       </div>
     </div>
   </section>

@@ -8,14 +8,14 @@
     <div class="hero__inner">
       <div class="hero__content">
         <h1 class="text-white">
-          Contact Us
+          {{ 'title_5' | i18n }}
         </h1>
         <div class="breadcrumb">
           <nav aria-label="Breadcrumb">
             <ol class="breadcrumb__list clearfix">
               <li class="breadcrumb__item">
-                <a class="breadcrumb__link nav-link" href="./">
-                  Home
+                <a class="breadcrumb__link nav-link" href="/{{ locale }}/">
+                  {{ 'home' | i18n }}
                 </a>
               </li>
               <!-- TODO: Is the href attribute necessary for the last link? -->
@@ -23,8 +23,8 @@
                 <span class="elementor-icon-list-icon ">
                   <i aria-hidden="true" class="fas fa-chevron-right"></i>
                 </span>
-                <a class="breadcrumb__link nav-link" href="./contact.html" aria-current="page">
-                  Contact
+                <a class="breadcrumb__link nav-link" href="/{{ locale }}/contact/" aria-current="page">
+                  {{ 'contact' | i18n }}
                 </a>
               </li>
             </ol>

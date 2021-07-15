@@ -476,6 +476,10 @@ input::-webkit-input-placeholder {
   justify-content: center;
 }
 
+.nav-link--current {
+  color: #d22108;
+}
+
 
 @media (max-width: 1024px) {
   .nav-link {

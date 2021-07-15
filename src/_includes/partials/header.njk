@@ -4,7 +4,7 @@
             <div class="header__logo logo" role="banner">
             <a href="/">
                 <img
-                src="./../assets/img/logo.png"
+                src="{{ site.url }}/assets/img/logo.png"
                 alt="Zeemo"
                 width="181"
                 height="42"
@@ -18,11 +18,11 @@
                 <ul class="main-menu" role="menubar" aria-label="softevol main menu">
                 {% for link, href in menu %}
                     <li class="main-menu__item" role="none">
-                        <a class="main-menu__link" href="{{ href }}" role="menuitem">{{ link | i18n }} </a>
+                        <a class="main-menu__link" href="/{{ locale }}{{ href }}" role="menuitem">{{ link | i18n }}</a>
                     </li>
                 {% endfor %}
-                </ul>
                 {% include 'partials/language-selector.njk' %}
+                </ul>
             </nav>
             </div>
         </div>

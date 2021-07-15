@@ -1,34 +1,34 @@
 module.exports = {
   hello: {
-    'en-GB': 'Hello',
-    'ru-RU': 'Привет'
+    'en': 'Hello',
+    'de': 'Hallo'
   },
   select_language: {
-    'en-GB': 'Select language',
-    'ru-RU': 'Выберите язык'
+    'en': 'Select language',
+    'de': 'Sprache auswählen'
   },
   home: {
-    'en-GB': 'Home',
-    'ru-RU': 'Главная'
+    'en': 'Home',
+    'de': 'Zuhause'
   },
   about: {
-    'en-GB': 'About',
-    'ru-RU': 'О нас'
+    'en': 'About',
+    'de': 'Über'
   },
   services: {
-    'en-GB': 'Services',
-    'ru-RU': 'Услуги'
+    'en': 'Services',
+    'de': 'Dienstleistungen'
   },
   portfolio: {
-    'en-GB': 'Portfolio',
-    'ru-RU': 'Портфолио'
+    'en': 'Portfolio',
+    'de': 'Portfolio'
   },
   clients: {
-    'en-GB': 'Clients',
-    'ru-RU': 'Клиенты'
+    'en': 'Clients',
+    'de': 'Kunden'
   },
   contact: {
-    'en-GB': 'Contact',
-    'ru-RU': 'Контакты'
+    'en': 'Contact',
+    'de': 'Kontakt'
   },
 };

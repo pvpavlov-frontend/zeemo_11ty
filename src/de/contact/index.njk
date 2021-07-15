@@ -1,0 +1,190 @@
+---
+  title: We make apps!
+  layout: layouts/index.njk
+---
+
+<div class="section hero page-secondary page-contact">
+  <section>
+    <div class="hero__inner">
+      <div class="hero__content">
+        <h1 class="text-white">
+          Contact Us
+        </h1>
+        <div class="breadcrumb">
+          <nav aria-label="Breadcrumb">
+            <ol class="breadcrumb__list clearfix">
+              <li class="breadcrumb__item">
+                <a class="breadcrumb__link nav-link" href="./">
+                  Home
+                </a>
+              </li>
+              <!-- TODO: Is the href attribute necessary for the last link? -->
+              <li class="breadcrumb__item">
+                <span class="elementor-icon-list-icon ">
+                  <i aria-hidden="true" class="fas fa-chevron-right"></i>
+                </span>
+                <a class="breadcrumb__link nav-link" href="./contact.html" aria-current="page">
+                  Contact
+                </a>
+              </li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="section contact-us">
+  <div class="container">
+    <div class="spacer-50"></div>
+    <div class="spacer-20"></div>
+    <div class="spacer-20"></div>
+    <section>
+      <div class="contact-us__inner">
+        <div class="blocks-container blocks-container--wrap blocks-container--2 clearfix">
+          <div class="blocks-container__item">
+            <div class="dimensional-container">
+              <div class="contact-form">
+                <div class="blocks-container__item-buffer-outer">
+                  <form method="POST">
+                    <div class="contact-form__layout-container">
+                      <div class="contact-form__buffer-container">
+                        <label class="contact-form__label" for="user-name">
+                          Name
+                        </label>
+                      </div>
+                      <div class="contact-form__buffer-container">
+                        <input class="contact-form__field" type="text" name="user-name" id="user-name"
+                          placeholder="Your Name" required>
+                      </div>
+                    </div>
+                    <div class="blocks-container blocks-container--nowrap blocks-container--2 clearfix">
+                      <div class="blocks-container__item">
+                        <div class="contact-form__layout-container">
+                          <div class="contact-form__buffer-container">
+                            <label class="contact-form__label" for="user-email">
+                              Email
+                            </label>
+                          </div>
+                          <div class="contact-form__buffer-container">
+                            <input class="contact-form__field" type="email" name="user-email" id="user-email"
+                              placeholder="Your Email" required>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="blocks-container__item">
+                        <div class="contact-form__layout-container">
+                          <div class="contact-form__buffer-container">
+                            <label class="contact-form__label" for="user-phone">
+                              Telephone
+                            </label>
+                          </div>
+                          <div class="contact-form__buffer-container">
+                            <input class="contact-form__field" type="tel" name="user-phone" id="user-phone"
+                              placeholder="Your Phone" required>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="contact-form__layout-container">
+                      <div class="contact-form__buffer-container">
+                        <label class="contact-form__label" for="user-message">
+                          Additional Details
+                        </label>
+                      </div>
+                      <div class="contact-form__buffer-container">
+                        <textarea class="contact-form__field" name="user-message" id="user-message"
+                          placeholder="Additional Details" required></textarea>
+                      </div>
+                    </div>
+                    <div class="contact-form__buffer-container">
+                      <button class="contact-form__submit primary-button" type="submit">Submit Request</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="blocks-container__item">
+            <div class="blocks-container__item-buffer-outer">
+              <div class="blocks-container__item-buffer-inner">
+                <h2 class="h2--color">
+                  Let's Get In Touch
+                </h2>
+                <address>
+                  <div class="blocks-container blocks-container--nowrap blocks-container--2 clearfix">
+                    <div class="blocks-container__item">
+                      <div class="address-block">
+                        <h3 class="h4">
+                          <i aria-hidden="true" class="elementkit-infobox-icon icon icon-map-marker1"></i>
+                          <b>
+                            Address
+                          </b>
+                        </h3>
+                        <p>
+                          Breslauer Allee 48, 31787 Hameln, Germany
+                        </p>
+                      </div>
+                    </div>
+                    <div class="blocks-container__item">
+                      <div class="address-block">
+                        <h3 class="h4">
+                          <i aria-hidden="true" class="elementkit-infobox-icon icon icon-envelope2"></i>
+                          <b>
+                            Email
+                          </b>
+                        </h3>
+                        <p>
+                          Email: hello@zeemo.app
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </address>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="spacer-50"></div>
+    <div class="spacer-20"></div>
+    <div class="spacer-20"></div>
+  </div>
+</div>
+<div class="google-map" style="
+        position: relative;
+        width: 100%;
+        padding-bottom: 480px;
+        background-color: #e6e4e0;
+        overflow: hidden;
+      ">
+  <img src="../assets/img/map.jpg" width="1440" height="480" alt="Breslauer Allee 48, 31787 Hameln, Germany"
+    style="
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      " />
+  <p class="google-map__tooltip" style="
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        z-index: 2;
+        color: #4c4b51;
+        background-color: #ffffff;
+        transform: translateX(-50%);
+      ">
+    <a href="https://goo.gl/maps/vxuevrAoPndYzsZJ7"> Breslauer Allee 48, 31787 Hameln, Germany</a>
+  </p>
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2450.3592234481835!2d9.344548208286293!3d52.10959243633748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47ba8ee792d7594f%3A0x981d90dd60d906ca!2sBreslauer%20Allee%2048%2C%2031787%20Hameln%2C%20Germany!5e0!3m2!1sen!2sua!4v1623931655207!5m2!1sen!2sua"
+    width: 100%; height: 480px; style="
+      position: absolute;
+      z-index: 3;
+      display: block;
+      width: 100%;
+      height: 480px;
+      border: 0;" allowfullscreen="" loading="lazy"></iframe>
+</div>

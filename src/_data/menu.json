@@ -1,8 +1,8 @@
 {
     "home": "/",
-    "about": "about/index.html",
-    "services": "services/index.html",
-    "portfolio": "portfolio/index.html",
-    "clients": "clients/index.html",
-    "contact": "contact/index.html"
+    "about": "/about/",
+    "services": "/services/",
+    "portfolio": "/portfolio/",
+    "clients": "/clients/",
+    "contact": "/contact/"
 }

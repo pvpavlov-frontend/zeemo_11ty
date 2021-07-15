@@ -1,0 +1,104 @@
+---
+  title: We make apps!
+  layout: layouts/index.njk
+---
+
+<div class="section hero page-secondary page-portfolio">
+  <section>
+    <div class="hero__inner">
+      <div class="hero__content">
+        <h1 class="text-white">
+          Portfolio
+        </h1>
+        <div class="breadcrumb">
+          <nav aria-label="Breadcrumb">
+            <ol class="breadcrumb__list clearfix">
+              <li class="breadcrumb__item">
+                <a class="breadcrumb__link nav-link" href="./">
+                  Home
+                </a>
+              </li>
+              <!-- TODO: Is the href attribute necessary for the last link? -->
+              <li class="breadcrumb__item">
+                <span class="elementor-icon-list-icon ">
+                  <i aria-hidden="true" class="fas fa-chevron-right"></i>
+                </span>
+                <a class="breadcrumb__link nav-link" href="./portfolio.html" aria-current="page">
+                  Portfolio
+                </a>
+              </li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="serction our-works">
+  <div class="container">
+    <section>
+      <div class="our-works__inner">
+        <div class="spacer-50"></div>
+        <div class="spacer-20"></div>
+        <div class="spacer-20"></div>
+        <h2 class="text-center h2--color subtitle">
+          Portfolio
+        </h2>
+        <div class="spacer-20"></div>
+        <div class="spacer-20"></div>                  
+        <div class="gallery">
+          <ul class="gallery__filter blocks-container blocks-container--nowrap blocks-container--3 clearfix">
+              <li class="blocks-container__item">
+                <a data-for="all" class="gallery__filter-link text-button" href="./">
+                  All
+                </a>
+              </li>
+              <li class="blocks-container__item">
+                <a data-for="own" class="gallery__filter-link text-button" href="./gallery/own.html">
+                  Own
+                </a>
+              </li>
+              <li class="blocks-container__item">
+                <a data-for="customer" class="gallery__filter-link text-button" href="./gallery/customer.html">
+                  Customer
+                </a>
+              </li>
+          </ul>
+          <div class="gallery__mansorny blocks-container blocks-container--wrap blocks-container--3 clearfix">
+            <div class="blocks-container__item gallery__mansorny-item" data-item="all customer">
+              <div class="blocks-container__item-buffer-outer">
+                <div class="our-works__card">
+                  <img src="{{ site.url }}/assets/img/filter-customer_1.png" alt="Alt">
+                </div>
+              </div>
+            </div>
+            <div class="blocks-container__item gallery__mansorny-item" data-item="all own">
+              <div class="blocks-container__item-buffer-outer">
+                <div class="our-works__card ">
+                  <img src="{{ site.url }}/assets/img/filter-own_1.png" alt="Alt">
+                </div>
+              </div>
+            </div>
+            <div class="blocks-container__item gallery__mansorny-item" data-item="all customer">
+              <div class="blocks-container__item-buffer-outer">
+                <div class="our-works__card">
+                  <img src="{{ site.url }}/assets/img/filter-customer_2.png" alt="Alt">
+                </div>
+              </div>
+            </div>
+            <div class="blocks-container__item gallery__mansorny-item" data-item="all own">
+              <div class="blocks-container__item-buffer-outer">
+                <div class="our-works__card">
+                  <img src="{{ site.url }}/assets/img/filter-own_2.png" alt="Alt">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="spacer-50"></div>
+        <div class="spacer-20"></div>
+        <div class="spacer-20"></div>
+      </div>
+    </section>
+  </div>
+</div>

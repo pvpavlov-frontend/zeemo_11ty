@@ -18,7 +18,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPlugin(i18n, {
         translations,
         fallbackLocales: {
-            '*': 'en-GB'
+            '*': 'en'
         }
     });
 
@@ -37,7 +37,7 @@ module.exports = function (eleventyConfig) {
                 bs.addMiddleware('*', (req, res) => {
                     if (req.url === '/') {
                         res.writeHead(302, {
-                            location: '/en-GB/'
+                            location: '/en/'
                         });
                         res.end();
                     }
